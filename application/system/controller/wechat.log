@@ -1,0 +1,12 @@
+[2018-04-02 10:59:30] NULL.DEBUG: Request received: {"method":"GET","uri":"http://edu.natapp1.cc/wechat/public/system/connect/weChat","content-type":null,"content":""} 
+[2018-04-02 10:59:30] NULL.ERROR: 0: Undefined index: MsgType {"code":0,"message":"Undefined index: MsgType","file":"D:\\Demo\\wechat\\application\\system\\controller\\Connect.php","line":51} 
+[2018-04-02 10:59:30] NULL.DEBUG: Server response created: {"content":"success"} 
+[2018-04-02 10:59:57] NULL.DEBUG: Request received: {"method":"GET","uri":"http://edu.natapp1.cc/wechat/public/system/connect/weChat?echostr=7068194349541490427&nonce=3172323150&signature=ab06aeb3a1b3ac3f9033a921545b80ef71b67372&timestamp=1522637993","content-type":null,"content":""} 
+[2018-04-02 10:59:57] NULL.ERROR: 0: Undefined index: MsgType {"code":0,"message":"Undefined index: MsgType","file":"D:\\Demo\\wechat\\application\\system\\controller\\Connect.php","line":51} 
+[2018-04-02 10:59:57] NULL.DEBUG: Server response created: {"content":"7068194349541490427"} 
+[2018-04-02 11:19:53] NULL.DEBUG: Request received: {"method":"GET","uri":"http://edu.natapp1.cc/wechat/public/system/index/connectWeChat?echostr=4004723344150209374&nonce=3840305006&signature=1c495aba5ce4389428c4f190e4d525873509946b&timestamp=1522639186","content-type":null,"content":""} 
+[2018-04-02 11:19:53] NULL.ERROR: 0: Undefined index: MsgType {"code":0,"message":"Undefined index: MsgType","file":"D:\\Demo\\wechat\\application\\system\\controller\\Index.php","line":48} 
+[2018-04-02 11:19:53] NULL.DEBUG: Server response created: {"content":"4004723344150209374"} 
+[2018-04-02 11:19:53] NULL.DEBUG: Request received: {"method":"GET","uri":"http://edu.natapp1.cc/wechat/public/system/index/connectWeChat?echostr=4053245084811111423&nonce=3965792750&signature=b664667e9c12e9f425e8cd493701f620d542dc47&timestamp=1522639190","content-type":null,"content":""} 
+[2018-04-02 11:19:53] NULL.ERROR: 0: Undefined index: MsgType {"code":0,"message":"Undefined index: MsgType","file":"D:\\Demo\\wechat\\application\\system\\controller\\Index.php","line":48} 
+[2018-04-02 11:19:53] NULL.DEBUG: Server response created: {"content":"4053245084811111423"} 
