@@ -12,4 +12,18 @@ class SystemInfo extends Validate
         'token'         => 'require|max:32|min:3',
         'aesKey'        => 'length:43',
     ];
+
+    protected $modifyRule = [
+        'id'            => 'require',
+        'token'         => 'max:32|min:3',
+        'aesKey'        => 'length:43',
+    ];
+
+    public function getRule($name)
+    {
+        return $this->{$name};
+    }
+
+
+
 }

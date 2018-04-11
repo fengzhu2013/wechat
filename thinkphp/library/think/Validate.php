@@ -29,6 +29,8 @@ class Validate
         '>' => 'gt', '>=' => 'egt', '<' => 'lt', '<=' => 'elt', '=' => 'eq', 'same' => 'eq',
     ];
 
+    protected $menu = [];
+
     // 当前验证的规则
     protected $rule = [];
 
@@ -144,6 +146,16 @@ class Validate
             $this->rule[$name] = $rule;
         }
         return $this;
+    }
+
+    /**
+     * 根据规则名获得规则
+     * @param $rule
+     * @return mixed
+     */
+    public function getRule($rule)
+    {
+        return $this->{$rule};
     }
 
     /**
@@ -302,7 +314,6 @@ class Validate
 
             // 字段验证
             $result = $this->checkItem($key, $value, $rule, $data, $title, $msg);
-
             if (true !== $result) {
                 // 没有返回true 则表示验证失败
                 if (!empty($this->batch)) {
@@ -504,6 +515,10 @@ class Validate
             case 'accepted':
                 // 接受
                 $result = in_array($value, ['1', 'on', 'yes']);
+                break;
+            case 'acceptedSelf':
+                //自定义接受枚举值
+                $result = in_array($value,$this->menu);
                 break;
             case 'date':
                 // 是否是一个有效日期

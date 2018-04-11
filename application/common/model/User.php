@@ -1,10 +1,9 @@
 <?php
 namespace app\common\model;
 
-use app\common\logic\FormatString;
 use think\Model;
 
-class Admin extends Model
+class User extends Model
 {
 
     public function __construct($data = [])
@@ -13,7 +12,7 @@ class Admin extends Model
     }
 
     /**
-     * 验证userId是否存在该表中
+     * 验证userId是否真实存在
      * @param string $userId
      * @return bool
      */
@@ -26,16 +25,20 @@ class Admin extends Model
         return false;
     }
 
-    /**
-     * 完善添加管理员时所需要的固定信息
-     * @param int $time 时间戳
-     */
-    public function perfectAddAdminInfo($time = 0)
-    {
-        $this->data['password']     = md5($this->data['password']);
-        $this->data['status']       = '1';
-        $this->data['createTime']   = $time?$time:time();
-    }
 
+
+    /**
+     * 获得系统用户列表
+     * @param $param
+     * @param array $where
+     * @param array $order
+     * @return array
+     */
+
+
+    public function getCount()
+    {
+
+    }
 
 }

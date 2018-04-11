@@ -88,6 +88,18 @@ class FormatString
         return $arr;
     }
 
+    public function formatArrVal(array $arr,$type = 'o')
+    {
+        foreach ($arr as &$val) {
+            if ($type == 'i') {
+                $val = $this->formatIn($val);
+            } else {
+                $val = $this->format($val);
+            }
+        }
+        return $arr;
+    }
+
     public function formatIn($string)
     {
         $stringArr = str_split($string);

@@ -99,35 +99,6 @@ class Index
     }
 
 
-    /**
-     * @SWG\Post(
-     *     path="/system/index/systemLogin",
-     *     tags={"System"},
-     *     operationId="systemLogin",
-     *     summary="管理员登陆接口（用户id+密码）",
-     *     description="普通管理员及超管登陆该系统，进行相关操作",
-     *     consumes={"application/json"},
-     *     produces={"application/json"},
-     *     @SWG\Parameter(
-     *         name="userId",
-     *         in="formData",
-     *         description="管理员内部唯一标识符",
-     *         required=true,
-     *         type="string"
-     *     ),
-     *     @SWG\Parameter(
-     *         name="password",
-     *         in="formData",
-     *         description="登录密码",
-     *         required=true,
-     *         type="string"
-     *     ),
-     *     @SWG\Response(
-     *         response=405,
-     *         description="Invalid input",
-     *     ),
-     * )
-     */
     public function systemLogin()
     {
 

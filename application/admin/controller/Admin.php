@@ -179,7 +179,7 @@ class Admin
      *     tags={"System"},
      *     operationId="addSystemInfo",
      *     summary="添加微信系统必要信息",
-     *     description="添加微信系统必要信息，如appid等",
+     *     description="添加微信系统必要信息，如appid等，适用超级管理员",
      *     consumes={"multipart/form-data"},
      *     produces={"multipart/form-data"},
      *     @SWG\Parameter(
@@ -239,38 +239,329 @@ class Admin
         return json($res);
     }
 
+    /**
+     * @SWG\Post(
+     *     path="/admin/admin/modifySystemInfo",
+     *     tags={"System"},
+     *     operationId="modifySystemInfo",
+     *     summary="修改微信系统必要信息",
+     *     description="修改微信系统必要信息，如appid等,适用超级管理员",
+     *     consumes={"multipart/form-data"},
+     *     produces={"multipart/form-data"},
+     *     @SWG\Parameter(
+     *         name="SESSION_ID",
+     *         in="formData",
+     *         description="令牌号",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *     @SWG\Parameter(
+     *         name="id",
+     *         in="formData",
+     *         description="记录id",
+     *         required=true,
+     *         type="integer"
+     *     ),
+     *     @SWG\Parameter(
+     *         name="appid",
+     *         in="formData",
+     *         description="微信appid",
+     *         required=false,
+     *         type="string"
+     *     ),
+     *     @SWG\Parameter(
+     *         name="appsecret",
+     *         in="formData",
+     *         description="微信 appsecret",
+     *         required=false,
+     *         type="string"
+     *     ),
+     *     @SWG\Parameter(
+     *         name="token",
+     *         in="formData",
+     *         description="微信token",
+     *         required=false,
+     *         type="string"
+     *     ),
+     *     @SWG\Parameter(
+     *         name="aesKey",
+     *         in="formData",
+     *         description="密钥",
+     *         required=false,
+     *         type="string"
+     *     ),
+     *     @SWG\Response(
+     *         response=405,
+     *         description="Invalid input",
+     *     ),
+     * )
+     */
     //修改微信系统信息
     public function modifySystemInfo()
     {
+        $SystemObj = new System($this->loginLogInfo);
+        $ret = $SystemObj->modifySystemInfo($this->param);
 
+        //记录操作日志
+        $operatorInfo = $SystemObj->getInitInfo();
+        WriteLog::writeLog($ret,$operatorInfo,'system','u',$this->request->post());
+
+        //返回数据
+        $res = Status::processStatus($ret);
+        return json($res);
     }
 
+    /**
+     * @SWG\Post(
+     *     path="/admin/admin/getSystemInfo",
+     *     tags={"System"},
+     *     operationId="getSystemInfo",
+     *     summary="获得微信系统必要信息",
+     *     description="获得微信系统必要信息，如appid等，适用所有管理员",
+     *     consumes={"multipart/form-data"},
+     *     produces={"multipart/form-data"},
+     *     @SWG\Parameter(
+     *         name="SESSION_ID",
+     *         in="formData",
+     *         description="令牌号",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *     @SWG\Response(
+     *         response=405,
+     *         description="Invalid input",
+     *     ),
+     * )
+     */
     //获得微信系统信息
     public function getSystemInfo()
     {
+        $SystemObj = new System();
+        $ret = $SystemObj->getSystemInfo($this->param);
 
+        //不记录操作日志
+
+        //返回数据
+        $res = Status::processStatus($ret);
+        return json($res);
     }
 
-    //获得登陆者信息
-    public function getLoginInfo()
+    /**
+     * @SWG\Post(
+     *     path="/admin/admin/getUserInfo",
+     *     tags={"System"},
+     *     operationId="getUserInfo",
+     *     summary="获得用户信息",
+     *     description="获得用户信息，如adminName等,适用所有管理员",
+     *     consumes={"multipart/form-data"},
+     *     produces={"multipart/form-data"},
+     *     @SWG\Parameter(
+     *         name="SESSION_ID",
+     *         in="formData",
+     *         description="令牌号",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *     @SWG\Parameter(
+     *         name="userId",
+     *         in="formData",
+     *         description="用户Id",
+     *         required=false,
+     *         type="string"
+     *     ),
+     *     @SWG\Response(
+     *         response=405,
+     *         description="Invalid input",
+     *     ),
+     * )
+     */
+    //获得用户信息
+    public function getUserInfo()
     {
+        $SystemObj = new System($this->loginLogInfo);
+        $ret = $SystemObj->getUserInfo($this->param);
 
+        //不记录日志信息
+
+        //返回数据
+        $res = Status::processStatus($ret);
+        return json($res);
     }
 
+    /**
+     * @SWG\Post(
+     *     path="/admin/admin/modifyUserInfo",
+     *     tags={"System"},
+     *     operationId="modifyUserInfo",
+     *     summary="修改用户信息",
+     *     description="修改用户信息，如adminName等,只有超级管理员才能修改其他管理员的信息",
+     *     consumes={"multipart/form-data"},
+     *     produces={"multipart/form-data"},
+     *     @SWG\Parameter(
+     *         name="SESSION_ID",
+     *         in="formData",
+     *         description="令牌号",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *     @SWG\Parameter(
+     *         name="userId",
+     *         in="formData",
+     *         description="用户Id",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *      @SWG\Parameter(
+     *         name="adminName",
+     *         in="formData",
+     *         description="用户名",
+     *         required=false,
+     *         type="string"
+     *     ),
+     *      @SWG\Parameter(
+     *         name="password",
+     *         in="formData",
+     *         description="用户密码",
+     *         required=false,
+     *         type="string"
+     *     ),
+     *      @SWG\Parameter(
+     *         name="status",
+     *         in="formData",
+     *         description="用户状态",
+     *         required=false,
+     *         type="string"
+     *     ),
+     *     @SWG\Response(
+     *         response=405,
+     *         description="Invalid input",
+     *     ),
+     * )
+     */
     //修改用户信息
     public function modifyUserInfo()
     {
+        $SystemObj = new System($this->loginLogInfo);
+        $ret = $SystemObj->modifyUserInfo($this->param);
 
+        //记录日志
+        $operatorInfo = $SystemObj->getInitInfo();
+        WriteLog::writeLog($ret,$operatorInfo,'admin','u',$this->request->post());
+
+        //返回信息
+        $res = Status::processStatus($ret);
+        return json($res);
     }
 
+    /**
+     * @SWG\Post(
+     *     path="/admin/admin/addAdminUser",
+     *     tags={"System"},
+     *     operationId="addAdminUser",
+     *     summary="增加管理员",
+     *     description="增加一个普通管理员，针对超级管理员",
+     *     consumes={"multipart/form-data"},
+     *     produces={"multipart/form-data"},
+     *     @SWG\Parameter(
+     *         name="SESSION_ID",
+     *         in="formData",
+     *         description="令牌号",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *     @SWG\Parameter(
+     *         name="userId",
+     *         in="formData",
+     *         description="用户Id",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *      @SWG\Parameter(
+     *         name="adminName",
+     *         in="formData",
+     *         description="用户名",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *      @SWG\Parameter(
+     *         name="password",
+     *         in="formData",
+     *         description="用户密码",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *     @SWG\Response(
+     *         response=405,
+     *         description="Invalid input",
+     *     ),
+     * )
+     */
     //添加管理员
     public function addAdminUser()
     {
+        $SystemObj = new System($this->loginLogInfo);
+        $ret = $SystemObj->addAdminUser($this->param);
 
+        //记录日志
+        $operatorInfo = $SystemObj->getInitInfo();
+        WriteLog::writeLog($ret,$operatorInfo,'admin','a',$this->request->post());
+
+        //返回数据
+        $res = Status::processStatus($ret);
+        return json($res);
     }
 
+    /**
+     * @SWG\Post(
+     *     path="/admin/admin/getAdminList",
+     *     tags={"System"},
+     *     operationId="getAdminList",
+     *     summary="获得管理员列表",
+     *     description="获得管理员列表，针对超级管理员，用于查看或修改信息",
+     *     consumes={"multipart/form-data"},
+     *     produces={"multipart/form-data"},
+     *     @SWG\Parameter(
+     *         name="SESSION_ID",
+     *         in="formData",
+     *         description="令牌号",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *     @SWG\Parameter(
+     *         name="page",
+     *         in="formData",
+     *         description="当前页",
+     *         required=false,
+     *         type="integer"
+     *     ),
+     *     @SWG\Parameter(
+     *         name="pageSize",
+     *         in="formData",
+     *         description="页容量",
+     *         required=false,
+     *         type="integer"
+     *     ),
+     *     @SWG\Response(
+     *         response=405,
+     *         description="Invalid input",
+     *     ),
+     * )
+     */
     //获得管理员列表
     public function getAdminList()
+    {
+        $SystemObj = new System($this->loginLogInfo);
+        $ret = $SystemObj->getAdminList($this->param);
+
+        //不用记录日志
+
+        //返回数据
+        $res = Status::processStatus($ret);
+        return json($res);
+    }
+
+    //删除一个管理员
+    public function deleteAdmin()
     {
 
     }

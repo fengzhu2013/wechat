@@ -113,6 +113,10 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
 
     protected static $formatObj;
 
+    protected static $page = 1;
+
+    protected static $pageSize = 8;
+
     /**
      * 架构函数
      * @access public
@@ -711,7 +715,6 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
             if (false === $this->trigger('before_insert', $this)) {
                 return false;
             }
-
             $result = $this->db()->insert($this->data);
 
             // 获取自动增长主键
@@ -1020,7 +1023,7 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
     /**
      * 自定义get函数
      * @param array $where
-     * @return array|Model
+     * @return array
      */
     public static function getSelf(array $where)
     {
@@ -1031,19 +1034,26 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
         return [];
     }
 
+    public static function getSelfObj(array $where)
+    {
+        return self::get(self::$formatObj->formatArrKey($where,'i'));
+    }
+
     /**
-     * 自定义save
-     * @param $data
+     * 自定义save,处理了字段
+     * @param array $data
+     * @param array $where
+     * @param null $sequence
      * @return false|int
      */
-    public function saveSelf($data = [])
+    public function saveSelf($data = [],$where = [], $sequence = null)
     {
         if ($data) {
             $this->data($data);
         }
         //处理插入数组的键
         $this->data = self::$formatObj->formatArrKey($this->data,'i');
-        return self::save();
+        return self::save($this->data,$where,$sequence);
     }
 
     /**
@@ -1499,6 +1509,64 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
     public function __wakeup()
     {
         $this->initialize();
+    }
+
+    /**
+     * 检查要更新的变量，前提是已经调用了某方法获得该模型对象
+     * @param $param
+     * @return bool true表示有数据改变
+     */
+    public function checkUpdateInfo($param)
+    {
+        $i = 0;
+        foreach ($param as $key => $val) {
+            $value = self::$formatObj->formatIn($key);
+            if ($this->{$value} !== $val) {
+                $this->{$value} = $val;
+                $i++;
+            }
+        }
+        if (0 === $i) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * 获得自定义的多个信息
+     * @param $param
+     * @param array $where
+     * @param array $order
+     * @return array
+     */
+    public function getPage($param,$where = [],$order = [])
+    {
+        $ret = [];
+        @self::$page        = $param['page']?$param['page']:self::$page;
+        @self::$pageSize    = $param['pageSize']?$param['pageSize']:self::$pageSize;
+        $offset = (self::$page - 1) * self::$pageSize;
+        if (!$order) {
+            $info = self::where($where)->limit($offset,self::$pageSize)->select();
+        } else {
+            $info = self::where($where)->order($order)->limit($offset,self::$pageSize)->select();
+        }
+        if (!$info) {
+            return $ret;
+        }
+        foreach ($info as $val) {
+            $ret[] = self::$formatObj->formatArrKey($val->toArray());
+        }
+        return $ret;
+    }
+
+    /**
+     * 获得符合条件的数量总数
+     * @param $where
+     * @return int
+     */
+    public function getCount($where = [])
+    {
+        return self::where($where)->count();
     }
 
 }
