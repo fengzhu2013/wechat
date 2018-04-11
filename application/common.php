@@ -10,3 +10,18 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
+
+/**
+ * 创建令牌号
+ * @param $userId
+ * @param $password
+ * @param $time
+ * @return string
+ */
+function createSESSION_ID($userId,$password,$time)
+{
+    return md5($userId.$password.$time);
+}
+
+
+

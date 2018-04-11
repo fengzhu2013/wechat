@@ -26,7 +26,7 @@ use think\paginator\Collection as PaginatorCollection;
  * @method Query union(mixed $union, boolean $all = false) static UNION查询
  * @method Query limit(mixed $offset, integer $length = null) static 查询LIMIT
  * @method Query order(mixed $field, string $order = null) static 查询ORDER
- * @method Query cache(mixed $key = true , integer $expire = null) static 设置查询缓存
+ * @method Query cache(bool $key = true , integer $expire = null) static 设置查询缓存
  * @method mixed value(string $field) static 获取某个字段的值
  * @method array column(string $field, string $key = '') static 获取某个列的值
  * @method Query view(mixed $join, mixed $field = null, mixed $on = null, string $type = 'INNER') static 视图查询
@@ -38,9 +38,9 @@ use think\paginator\Collection as PaginatorCollection;
  * @method integer update(array $data) static 更新记录
  * @method integer delete(mixed $data = []) static 删除记录
  * @method boolean chunk(integer $count, callable $callback, string $column = null) static 分块获取数据
- * @method mixed query(string $sql, array $bind = [], boolean $fetch = false, boolean $master = false, mixed $class = false) static SQL查询
+ * @method mixed query(string $sql, array $bind = [], boolean $fetch = false, boolean $master = false, bool $class = false) static SQL查询
  * @method integer execute(string $sql, array $bind = [], boolean $fetch = false, boolean $getLastInsID = false, string $sequence = null) static SQL执行
- * @method PaginatorCollection paginate(integer $listRows = 15, mixed $simple = false, array $config = []) static 分页查询
+ * @method PaginatorCollection paginate(integer $listRows = 15, bool $simple = false, array $config = []) static 分页查询
  * @method mixed transaction(callable $callback) static 执行数据库事务
  * @method boolean batchQuery(array $sqlArray) static 批处理执行SQL语句
  */

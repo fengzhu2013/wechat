@@ -11,6 +11,7 @@
 
 namespace think;
 
+use app\common\logic\FormatString;
 use InvalidArgumentException;
 use think\Cache;
 use think\Config;
@@ -109,6 +110,9 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
      */
     protected static $initialized = [];
 
+
+    protected static $formatObj;
+
     /**
      * 架构函数
      * @access public
@@ -142,6 +146,8 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
 
         // 执行初始化操作
         $this->initialize();
+
+        self::$formatObj = new FormatString();
     }
 
     /**
@@ -728,12 +734,14 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
         return $result;
     }
 
+
     /**
      * 保存多个数据到当前数据对象
      * @access public
-     * @param array     $dataSet 数据
-     * @param boolean   $replace 是否自动识别更新和写入
-     * @return array|false
+     * @param $dataSet  $dataSet 数据
+     * @param bool $replace $replace 是否自动识别更新和写入
+     * @return array|bool
+     * @throws \Exception
      */
     public function saveAll($dataSet, $replace = true)
     {
@@ -1007,6 +1015,35 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
     {
         $query = static::parseQuery($data, $with, $cache);
         return $query->find($data);
+    }
+
+    /**
+     * 自定义get函数
+     * @param array $where
+     * @return array|Model
+     */
+    public static function getSelf(array $where)
+    {
+        $userInfo = self::get(self::$formatObj->formatArrKey($where,'i'));
+        if ($userInfo) {
+            return self::$formatObj->formatArrKey($userInfo->toArray());
+        }
+        return [];
+    }
+
+    /**
+     * 自定义save
+     * @param $data
+     * @return false|int
+     */
+    public function saveSelf($data = [])
+    {
+        if ($data) {
+            $this->data($data);
+        }
+        //处理插入数组的键
+        $this->data = self::$formatObj->formatArrKey($this->data,'i');
+        return self::save();
     }
 
     /**

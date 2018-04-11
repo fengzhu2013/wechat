@@ -2,7 +2,9 @@
 
 namespace app\system\controller;
 
-class Admin
+use think\Controller;
+
+class Admin extends Controller
 {
     const LOGIN_EXPIRE_TIME = 21600;            //登陆有效期为6h，单位s
 
@@ -29,6 +31,12 @@ class Admin
      * @var bool
      */
     private $isPower = false;
+
+    /**
+     * 是否有效
+     * @var bool
+     */
+    private $isExpire = false;
 
     public function __construct()
     {
@@ -111,6 +119,19 @@ class Admin
      * 获得管理员操作记录列表
      */
     public function getWriteLogList()
+    {
+
+    }
+
+
+    //添加系统信息
+    public function addSystemInfo()
+    {
+
+    }
+
+    //修改系统信息
+    public function updateSystemInfo()
     {
 
     }

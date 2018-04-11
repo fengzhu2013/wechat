@@ -46,7 +46,7 @@ class Controller
         if (is_null($request)) {
             $request = Request::instance();
         }
-        $this->view    = View::instance(Config::get('template'), Config::get('view_replace_str'));
+        //$this->view    = View::instance(Config::get('template'), Config::get('view_replace_str'));
         $this->request = $request;
 
         // 控制器初始化
