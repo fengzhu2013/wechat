@@ -26,16 +26,6 @@ class Admin extends Model
         return false;
     }
 
-    /**
-     * 完善添加管理员时所需要的固定信息
-     * @param int $time 时间戳
-     */
-    public function perfectAddAdminInfo($time = 0)
-    {
-        $this->data['password']     = md5($this->data['password']);
-        $this->data['status']       = '1';
-        $this->data['createTime']   = $time?$time:time();
-    }
 
 
 }

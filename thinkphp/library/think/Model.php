@@ -697,7 +697,6 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
                 }
                 unset($data[$pk]);
             }
-
             $result = $this->db()->where($where)->update($data);
             // 清空change
             $this->change = [];
@@ -1005,6 +1004,13 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
         return $model;
     }
 
+    public static function updateSelf($data = [],$where = [])
+    {
+        $model = new static();
+        $result = $model->isUpdate(true)->save($data,$where);
+        return $result;
+    }
+
     /**
      * 查找单条记录
      * @access public
@@ -1050,6 +1056,9 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
     {
         if ($data) {
             $this->data($data);
+        }
+        if ($where) {
+            $where = self::$formatObj->formatArrKey($where,'i');
         }
         //处理插入数组的键
         $this->data = self::$formatObj->formatArrKey($this->data,'i');
@@ -1539,15 +1548,19 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
      * @param array $order
      * @return array
      */
-    public function getPage($param,$where = [],$order = [])
+    public function getPage($param,$where = [],array $order = []):array
     {
         $ret = [];
         @self::$page        = $param['page']?$param['page']:self::$page;
         @self::$pageSize    = $param['pageSize']?$param['pageSize']:self::$pageSize;
         $offset = (self::$page - 1) * self::$pageSize;
+        if ($where) {
+            $where = self::$formatObj->formatArrKey($where,'i');
+        }
         if (!$order) {
             $info = self::where($where)->limit($offset,self::$pageSize)->select();
         } else {
+            $order = self::$formatObj->formatArrKey($order,'i');
             $info = self::where($where)->order($order)->limit($offset,self::$pageSize)->select();
         }
         if (!$info) {

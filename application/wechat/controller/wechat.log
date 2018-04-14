@@ -1,0 +1,216 @@
+[2018-04-13 12:54:43] NULL.INFO: >>>>>>>>
+POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 72
+User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
+Content-Type: application/json
+
+{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":25}}}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json; encoding=utf-8
+Date: Fri, 13 Apr 2018 04:54:42 GMT
+Content-Length: 167
+
+{"ticket":"gQH58DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAycE1ndW8wNlljdzMxMDAwMDAwM2QAAgQSONBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02pMguo06Ycw310000003d"}
+--------
+NULL  
+[2018-04-13 14:27:02] NULL.INFO: >>>>>>>>
+POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 72
+User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
+Content-Type: application/json
+
+{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":26}}}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json; encoding=utf-8
+Date: Fri, 13 Apr 2018 06:27:02 GMT
+Content-Length: 167
+
+{"ticket":"gQGW8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAySDFXTXBaNlljdzMxMDAwME0wM0IAAgS2TdBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02H1WMpZ6Ycw310000M03B"}
+--------
+NULL  
+[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
+POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 72
+User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
+Content-Type: application/json
+
+{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":27}}}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json; encoding=utf-8
+Date: Fri, 13 Apr 2018 06:28:37 GMT
+Content-Length: 167
+
+{"ticket":"gQEm8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyNUhfMHBMNlljdzMxMDAwMHcwM0cAAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/025H_0pL6Ycw310000w03G"}
+--------
+NULL  
+[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
+POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 72
+User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
+Content-Type: application/json
+
+{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":28}}}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json; encoding=utf-8
+Date: Fri, 13 Apr 2018 06:28:37 GMT
+Content-Length: 167
+
+{"ticket":"gQEP8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyTUZCcnBRNlljdzMxMDAwME0wM0gAAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02MFBrpQ6Ycw310000M03H"}
+--------
+NULL  
+[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
+POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 72
+User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
+Content-Type: application/json
+
+{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":29}}}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json; encoding=utf-8
+Date: Fri, 13 Apr 2018 06:28:37 GMT
+Content-Length: 167
+
+{"ticket":"gQHq8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyZDVQdm9JNlljdzMxMDAwMGcwM0QAAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02d5PvoI6Ycw310000g03D"}
+--------
+NULL  
+[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
+POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 72
+User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
+Content-Type: application/json
+
+{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":30}}}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json; encoding=utf-8
+Date: Fri, 13 Apr 2018 06:28:37 GMT
+Content-Length: 167
+
+{"ticket":"gQFO8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyLWU0WHAxNlljdzMxMDAwMDAwM28AAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02-e4Xp16Ycw310000003o"}
+--------
+NULL  
+[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
+POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 72
+User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
+Content-Type: application/json
+
+{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":31}}}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json; encoding=utf-8
+Date: Fri, 13 Apr 2018 06:28:37 GMT
+Content-Length: 167
+
+{"ticket":"gQF58DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2tsanBxNlljdzMxMDAwMDAwM2oAAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02wkljpq6Ycw310000003j"}
+--------
+NULL  
+[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
+POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 72
+User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
+Content-Type: application/json
+
+{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":32}}}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json; encoding=utf-8
+Date: Fri, 13 Apr 2018 06:28:37 GMT
+Content-Length: 167
+
+{"ticket":"gQGF8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyYkF5cG9mNlljdzMxMDAwMGcwM18AAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02bAypof6Ycw310000g03_"}
+--------
+NULL  
+[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
+POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 72
+User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
+Content-Type: application/json
+
+{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":33}}}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json; encoding=utf-8
+Date: Fri, 13 Apr 2018 06:28:37 GMT
+Content-Length: 167
+
+{"ticket":"gQFC8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyMXdEVHAyNlljdzMxMDAwMDAwM1gAAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/021wDTp26Ycw310000003X"}
+--------
+NULL  
+[2018-04-13 14:28:38] NULL.INFO: >>>>>>>>
+POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 72
+User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
+Content-Type: application/json
+
+{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":34}}}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json; encoding=utf-8
+Date: Fri, 13 Apr 2018 06:28:38 GMT
+Content-Length: 167
+
+{"ticket":"gQFT8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAybGN5cG93NlljdzMxMDAwMGcwM1MAAgQWTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02lcypow6Ycw310000g03S"}
+--------
+NULL  
+[2018-04-13 14:28:38] NULL.INFO: >>>>>>>>
+POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 72
+User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
+Content-Type: application/json
+
+{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":35}}}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json; encoding=utf-8
+Date: Fri, 13 Apr 2018 06:28:38 GMT
+Content-Length: 167
+
+{"ticket":"gQHr8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyNVBGS3ByNlljdzMxMDAwMGcwM2EAAgQWTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/025PFKpr6Ycw310000g03a"}
+--------
+NULL  
+[2018-04-13 14:28:38] NULL.INFO: >>>>>>>>
+POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+Host: api.weixin.qq.com
+Content-Length: 72
+User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
+Content-Type: application/json
+
+{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":36}}}
+<<<<<<<<
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: application/json; encoding=utf-8
+Date: Fri, 13 Apr 2018 06:28:38 GMT
+Content-Length: 167
+
+{"ticket":"gQEy8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyZEtDRHBfNlljdzMxMDAwMDAwM0QAAgQWTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02dKCDp_6Ycw310000003D"}
+--------
+NULL  

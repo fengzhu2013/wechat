@@ -88,6 +88,9 @@ class FormatString
         return $arr;
     }
 
+
+
+
     public function formatArrVal(array $arr,$type = 'o')
     {
         foreach ($arr as &$val) {

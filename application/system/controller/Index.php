@@ -1,107 +1,62 @@
 <?php
 namespace App\system\controller;
 
+use app\common\service\Status;
+use app\common\service\WriteLog;
+use app\system\logic\System;
 use EasyWeChat\Factory;
+use think\Request;
+
 class Index
 {
-
-    protected $app_id;
-
-    protected $secret;
-
-    protected $token;
-
-    protected $aes_key;
-
+    protected $request;
     public function __construct()
     {
-        //获得配置信息
-        $this->initSystem();
+        $this->request = Request::instance();
     }
 
     /**
-     * connect server of wechat
-     * only for wechat server
+     * @SWG\Post(
+     *     path="/system/index/login",
+     *     tags={"System"},
+     *     operationId="systemLogin",
+     *     summary="管理员登陆接口（用户id+密码）",
+     *     description="普通管理员及超管登陆该系统，进行相关操作",
+     *     consumes={"multipart/form-data"},
+     *     produces={"multipart/form-data"},
+     *     @SWG\Parameter(
+     *         name="userId",
+     *         in="formData",
+     *         description="管理员内部唯一标识符",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *     @SWG\Parameter(
+     *         name="password",
+     *         in="formData",
+     *         description="登录密码",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *     @SWG\Response(
+     *         response=405,
+     *         description="Invalid input",
+     *     ),
+     * )
      */
-    public function connectWeChat()
+    //登陆
+    public function login()
     {
-        //配置信息
-        $config = [
-            'app_id'  => 'wx6974dcaaa1831a5d',
-            'secret'  => '44f163398c5bffbdffa2750cf4bff070',
-            'token'   => 'trueFly',
-            'aes_key' => 'I5nj4E8jUmjSsQRwaGnTx55LhwXelWWf8rOahKnuu5r',                    // EncodingAESKey，兼容与安全模式下请一定要填写！！！
+        $System = new System();
+        $ret    = $System->login($this->request);
+        //记录操作日志
+        //获得操作者等信息
+        $operatorInfo = $System->getInitInfo();
+        WriteLog::writeLog($ret,$operatorInfo,'admin','l',$this->request->post());
 
-            'response_type' => 'array',
-
-            'log' => [
-                'level' => 'debug',
-                'file' => __DIR__ . '/wechat.log',
-            ],
-        ];
-
-        // 使用配置来初始化一个公众号应用实例。
-        $app = Factory::officialAccount($config);
-
-        //消息处理
-        $app->server->push(function ($message) {
-            switch ($message['MsgType']) {
-                case 'event':
-                    return '收到事件消息';
-                    break;
-                case 'text':
-                    return '收到文字消息';
-                    break;
-                case 'image':
-                    return '收到图片消息';
-                    break;
-                case 'voice':
-                    return '收到语音消息';
-                    break;
-                case 'video':
-                    return '收到视频消息';
-                    break;
-                case 'location':
-                    return '收到坐标消息';
-                    break;
-                case 'link':
-                    return '收到链接消息';
-                    break;
-                // ... 其它消息
-                default:
-                    return '收到其它消息';
-                    break;
-            }
-        });
-
-        //执行服务端业务
-        $response = $app->server->serve();
-
-        // 将响应结果输出
-        $response->send();
-    }
-
-    /**
-     * 初始化配置信息
-     */
-    private function initSystem()
-    {
-        //获得数据库的信息
-        $info = [];
-    }
-
-    /**
-     * 系统生成管理员
-     */
-    public function createSystemAdmin()
-    {
-
-    }
-
-
-    public function systemLogin()
-    {
-
+        //加工返回信息
+        $res = Status::processStatus($ret);
+        return json($res);
     }
 
 

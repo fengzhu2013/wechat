@@ -56,6 +56,11 @@
  *     description="渠道",
  *   ),
  *
+ *   @SWG\Tag(
+ *     name="God",
+ *     description="上帝",
+ *   ),
+ *
  *
  * )
  */
