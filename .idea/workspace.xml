@@ -21,34 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thinkphp/library/think/Model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="1009" column="43" lean-forward="true" selection-start-line="1009" selection-start-column="43" selection-end-line="1009" selection-end-column="43" />
-              <folding>
-                <element signature="e#21087#22081#0#PHP" expanded="false" />
-                <element signature="e#28847#29232#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormatString.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/common/logic/FormatString.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="77" column="5" lean-forward="false" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Admin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/scene/controller/Admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-53">
-              <caret line="165" column="7" lean-forward="false" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
+            <state relative-caret-position="284">
+              <caret line="336" column="28" lean-forward="false" selection-start-line="336" selection-start-column="28" selection-end-line="336" selection-end-column="28" />
               <folding>
                 <element signature="e#39#75#0#PHP" expanded="true" />
                 <element signature="e#283#1296#0#PHP" expanded="false" />
@@ -56,81 +33,14 @@
                 <element signature="e#1573#3953#0#PHP" expanded="false" />
                 <element signature="e#3971#4342#0#PHP" expanded="false" />
                 <element signature="e#4348#6922#0#PHP" expanded="false" />
+                <element signature="e#6938#7320#0#PHP" expanded="false" />
                 <element signature="e#7326#8139#0#PHP" expanded="false" />
                 <element signature="e#8157#8540#0#PHP" expanded="false" />
-                <element signature="e#8546#9361#0#PHP" expanded="false" />
+                <element signature="e#9379#9789#0#PHP" expanded="false" />
                 <element signature="e#9795#10612#0#PHP" expanded="false" />
                 <element signature="e#10632#11034#0#PHP" expanded="false" />
-                <element signature="e#11055#11100#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SceneInfo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/scene/model/SceneInfo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="57" column="25" lean-forward="true" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-              <folding>
-                <element signature="e#34#47#0#PHP" expanded="true" />
-                <element signature="e#2026#2592#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scene.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/scene/model/Scene.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="89" column="42" lean-forward="false" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SceneInfo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/scene/validate/SceneInfo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scene.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/scene/validate/Scene.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Validate.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thinkphp/library/think/Validate.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="315" column="81" lean-forward="false" selection-start-line="315" selection-start-column="81" selection-end-line="315" selection-end-column="81" />
-              <folding>
-                <element signature="e#1097#3313#0#PHP" expanded="false" />
-                <element signature="e#7239#7603#0#PHP" expanded="false" />
-                <element signature="e#8388#8859#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Status.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/common/service/Status.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-              <folding>
-                <element signature="e#1257#2582#0#PHP" expanded="false" />
+                <element signature="e#11040#11666#0#PHP" expanded="false" />
+                <element signature="e#11686#12067#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -139,25 +49,36 @@
       <file leaf-file-name="Scene.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/scene/logic/Scene.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-533">
-              <caret line="237" column="39" lean-forward="false" selection-start-line="237" selection-start-column="39" selection-end-line="237" selection-end-column="39" />
+            <state relative-caret-position="259">
+              <caret line="387" column="40" lean-forward="false" selection-start-line="387" selection-start-column="40" selection-end-line="387" selection-end-column="40" />
               <folding>
                 <element signature="e#34#65#0#PHP" expanded="true" />
-                <element signature="e#1482#2177#0#PHP" expanded="false" />
-                <element signature="e#3515#3869#0#PHP" expanded="false" />
-                <element signature="e#3953#4313#0#PHP" expanded="false" />
-                <element signature="e#4948#5223#0#PHP" expanded="false" />
-                <element signature="e#5246#6220#0#PHP" expanded="false" />
-                <element signature="e#6241#7824#0#PHP" expanded="false" />
-                <element signature="e#6564#7228#0#PHP" expanded="false" />
-                <element signature="e#7844#8019#0#PHP" expanded="false" />
-                <element signature="e#8038#9003#0#PHP" expanded="false" />
-                <element signature="e#9131#9450#0#PHP" expanded="false" />
-                <element signature="e#9477#10265#0#PHP" expanded="false" />
-                <element signature="e#10282#11120#0#PHP" expanded="false" />
-                <element signature="e#11138#12866#0#PHP" expanded="false" />
-                <element signature="e#12009#12233#0#PHP" expanded="false" />
+                <element signature="e#733#3535#0#PHP" expanded="false" />
+                <element signature="e#3653#4007#0#PHP" expanded="false" />
+                <element signature="e#4091#4447#0#PHP" expanded="false" />
+                <element signature="e#5082#5357#0#PHP" expanded="false" />
+                <element signature="e#5380#6354#0#PHP" expanded="false" />
+                <element signature="e#6375#7958#0#PHP" expanded="false" />
+                <element signature="e#6698#7362#0#PHP" expanded="false" />
+                <element signature="e#7978#8153#0#PHP" expanded="false" />
+                <element signature="e#8172#9137#0#PHP" expanded="false" />
+                <element signature="e#9265#9584#0#PHP" expanded="false" />
+                <element signature="e#9611#10399#0#PHP" expanded="false" />
+                <element signature="e#10416#11577#0#PHP" expanded="false" />
+                <element signature="e#11595#13323#0#PHP" expanded="false" />
+                <element signature="e#12466#12690#0#PHP" expanded="false" />
+                <element signature="e#13347#14120#0#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Status.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/common/service/Status.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -214,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/test.html" />
         <option value="$PROJECT_DIR$/public/test.php" />
         <option value="$PROJECT_DIR$/thinkphp/library/think/Db.php" />
         <option value="$PROJECT_DIR$/application/common/model/AdminLog.php" />
@@ -257,13 +177,14 @@
         <option value="$PROJECT_DIR$/application/common/controller/BaseAdmin.php" />
         <option value="$PROJECT_DIR$/application/scene/model/Scene.php" />
         <option value="$PROJECT_DIR$/application/scene/validate/Scene.php" />
-        <option value="$PROJECT_DIR$/application/common/service/Status.php" />
         <option value="$PROJECT_DIR$/application/common/logic/FormatString.php" />
         <option value="$PROJECT_DIR$/application/scene/validate/SceneInfo.php" />
-        <option value="$PROJECT_DIR$/application/scene/controller/Admin.php" />
         <option value="$PROJECT_DIR$/thinkphp/library/think/Validate.php" />
         <option value="$PROJECT_DIR$/thinkphp/library/think/Model.php" />
         <option value="$PROJECT_DIR$/application/scene/model/SceneInfo.php" />
+        <option value="$PROJECT_DIR$/application/common.php" />
+        <option value="$PROJECT_DIR$/application/common/service/Status.php" />
+        <option value="$PROJECT_DIR$/application/scene/controller/Admin.php" />
         <option value="$PROJECT_DIR$/application/scene/logic/Scene.php" />
       </list>
     </option>
@@ -414,69 +335,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thinkphp" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="think" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="log" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="201804" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="log" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -491,112 +350,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scene" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="validate" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scene" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scene" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scene" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -724,18 +477,17 @@
       <workItem from="1523157269814" duration="44153000" />
       <workItem from="1523338633938" duration="6140000" />
       <workItem from="1523347228945" duration="65431000" />
-      <workItem from="1523495108560" duration="76496000" />
+      <workItem from="1523495108560" duration="88582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264990000" />
+    <option name="totallyTimeSpent" value="277076000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-15" y="-2" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2246596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2246596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -762,51 +514,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dist/swagger.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/log/201804/11.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="3422" column="0" lean-forward="false" selection-start-line="3422" selection-start-column="0" selection-end-line="3422" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thinkphp/library/think/db/Query.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="1077" column="20" lean-forward="false" selection-start-line="1077" selection-start-column="20" selection-end-line="1077" selection-end-column="20" />
-          <folding>
-            <marker date="1523425382203" expanded="true" signature="8926:8966" ph="SELECT * FRO... ${$this-&gt;getTable()}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="76" column="10" lean-forward="false" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/wechat/service/Base.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -917,14 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
           <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/common/service/WriteLog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="56" column="28" lean-forward="false" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1181,16 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/common/service/Status.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-          <folding>
-            <element signature="e#1257#2582#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/scene/validate/Scene.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1230,27 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/scene/controller/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53">
-          <caret line="165" column="7" lean-forward="false" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
-          <folding>
-            <element signature="e#39#75#0#PHP" expanded="true" />
-            <element signature="e#283#1296#0#PHP" expanded="false" />
-            <element signature="e#1314#1567#0#PHP" expanded="false" />
-            <element signature="e#1573#3953#0#PHP" expanded="false" />
-            <element signature="e#3971#4342#0#PHP" expanded="false" />
-            <element signature="e#4348#6922#0#PHP" expanded="false" />
-            <element signature="e#7326#8139#0#PHP" expanded="false" />
-            <element signature="e#8157#8540#0#PHP" expanded="false" />
-            <element signature="e#8546#9361#0#PHP" expanded="false" />
-            <element signature="e#9795#10612#0#PHP" expanded="false" />
-            <element signature="e#10632#11034#0#PHP" expanded="false" />
-            <element signature="e#11055#11100#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/scene/model/SceneInfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
@@ -1270,26 +943,106 @@
         </state>
       </provider>
     </entry>
+    <entry file="phar://$PROJECT_DIR$/composer.phar/src/Composer/Package/Archiver/ZipArchiver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/zip/zip.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common/service/WriteLog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-378">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinkphp/base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="33" column="51" lean-forward="true" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinkphp/start.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/scene/controller/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="336" column="28" lean-forward="false" selection-start-line="336" selection-start-column="28" selection-end-line="336" selection-end-column="28" />
+          <folding>
+            <element signature="e#39#75#0#PHP" expanded="true" />
+            <element signature="e#283#1296#0#PHP" expanded="false" />
+            <element signature="e#1314#1567#0#PHP" expanded="false" />
+            <element signature="e#1573#3953#0#PHP" expanded="false" />
+            <element signature="e#3971#4342#0#PHP" expanded="false" />
+            <element signature="e#4348#6922#0#PHP" expanded="false" />
+            <element signature="e#6938#7320#0#PHP" expanded="false" />
+            <element signature="e#7326#8139#0#PHP" expanded="false" />
+            <element signature="e#8157#8540#0#PHP" expanded="false" />
+            <element signature="e#9379#9789#0#PHP" expanded="false" />
+            <element signature="e#9795#10612#0#PHP" expanded="false" />
+            <element signature="e#10632#11034#0#PHP" expanded="false" />
+            <element signature="e#11040#11666#0#PHP" expanded="false" />
+            <element signature="e#11686#12067#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common/service/Status.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/scene/logic/Scene.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-533">
-          <caret line="237" column="39" lean-forward="false" selection-start-line="237" selection-start-column="39" selection-end-line="237" selection-end-column="39" />
+        <state relative-caret-position="259">
+          <caret line="387" column="40" lean-forward="false" selection-start-line="387" selection-start-column="40" selection-end-line="387" selection-end-column="40" />
           <folding>
             <element signature="e#34#65#0#PHP" expanded="true" />
-            <element signature="e#1482#2177#0#PHP" expanded="false" />
-            <element signature="e#3515#3869#0#PHP" expanded="false" />
-            <element signature="e#3953#4313#0#PHP" expanded="false" />
-            <element signature="e#4948#5223#0#PHP" expanded="false" />
-            <element signature="e#5246#6220#0#PHP" expanded="false" />
-            <element signature="e#6241#7824#0#PHP" expanded="false" />
-            <element signature="e#6564#7228#0#PHP" expanded="false" />
-            <element signature="e#7844#8019#0#PHP" expanded="false" />
-            <element signature="e#8038#9003#0#PHP" expanded="false" />
-            <element signature="e#9131#9450#0#PHP" expanded="false" />
-            <element signature="e#9477#10265#0#PHP" expanded="false" />
-            <element signature="e#10282#11120#0#PHP" expanded="false" />
-            <element signature="e#11138#12866#0#PHP" expanded="false" />
-            <element signature="e#12009#12233#0#PHP" expanded="false" />
+            <element signature="e#733#3535#0#PHP" expanded="false" />
+            <element signature="e#3653#4007#0#PHP" expanded="false" />
+            <element signature="e#4091#4447#0#PHP" expanded="false" />
+            <element signature="e#5082#5357#0#PHP" expanded="false" />
+            <element signature="e#5380#6354#0#PHP" expanded="false" />
+            <element signature="e#6375#7958#0#PHP" expanded="false" />
+            <element signature="e#6698#7362#0#PHP" expanded="false" />
+            <element signature="e#7978#8153#0#PHP" expanded="false" />
+            <element signature="e#8172#9137#0#PHP" expanded="false" />
+            <element signature="e#9265#9584#0#PHP" expanded="false" />
+            <element signature="e#9611#10399#0#PHP" expanded="false" />
+            <element signature="e#10416#11577#0#PHP" expanded="false" />
+            <element signature="e#11595#13323#0#PHP" expanded="false" />
+            <element signature="e#12466#12690#0#PHP" expanded="false" />
+            <element signature="e#13347#14120#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

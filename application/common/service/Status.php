@@ -66,7 +66,7 @@ class Status
         //如果info是数组，加工成，状态为0
         if (is_array($info) && count($info)) {
             return [
-                'data'      => $info,
+                'info'      => $info,
                 'status'    => 0,
                 'msg'       => self::$msg['0']
             ];
@@ -131,6 +131,21 @@ class Status
         header("Content-type:application/json;charset=utf-8");
         echo json_encode($info);
         exit;
+    }
+
+    /**
+     * 输出文件
+     * @param $fileName
+     */
+    public static function returnFile($fileName)
+    {
+        header("Cache-Control: public");
+        header("Content-Description: File Transfer");
+        header('Content-disposition: attachment; filename='.basename($fileName)); //文件名
+        header("Content-Type: application/force-download");
+        header("Content-Transfer-Encoding: binary");
+        header('Content-Length: '. filesize($fileName)); //告诉浏览器，文件大小
+        readfile($fileName);
     }
 
 

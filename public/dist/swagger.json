@@ -346,8 +346,8 @@
                         "name": "ids",
                         "in": "formData",
                         "description": "\u6e20\u9053\u8868id\u6570\u7ec4",
-                        "required": false,
-                        "type": "array"
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -385,6 +385,36 @@
                         "description": "\u6e20\u9053csv\u6587\u4ef6",
                         "required": true,
                         "type": "file"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/scene/admin/downloadScenes": {
+            "post": {
+                "tags": [
+                    "Scene"
+                ],
+                "summary": "\u6253\u5305\u4e0b\u8f7d\u6e20\u9053\u4fe1\u606f",
+                "description": "\u6253\u5305\u4e0b\u8f7d\u6e20\u9053\u4fe1\u606f,zip\u683c\u5f0f",
+                "operationId": "downloadScenes",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "name": "SESSION_ID",
+                        "in": "formData",
+                        "description": "\u4ee4\u724c\u53f7",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {

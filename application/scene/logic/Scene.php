@@ -5,11 +5,14 @@ use app\common\logic\ArrayTool;
 use app\common\logic\File;
 use app\scene\model\SceneInfo;
 use app\wechat\service\QrCode;
-use think\Db;
+use function Couchbase\fastlzCompress;
 use think\Loader;
 
 class Scene
 {
+    const QRCODE_PATH = ROOT_PATH.'public'.DS.'qrcode'.DS;
+
+    const ZIP_PATH = ROOT_PATH.'public'.DS.'zip'.DS;
 
     protected $timestamp;
 
@@ -147,10 +150,10 @@ class Scene
     protected function handleQrCodeInfo(array $info):array
     {
         foreach ($info as &$val) {
-            $fileName = 'public'.DS.'qrcode'.DS.$val['sceneId'].'.jpg';
-            file_put_contents(ROOT_PATH.$fileName,file_get_contents($val['url']));
+            $fileName = $val['sceneId'].'.jpg';
+            file_put_contents(self::QRCODE_PATH.$fileName,file_get_contents($val['url']));
             $val['status'] = 1;
-            $val['url']    = $fileName;
+            $val['url']    = 'qrcode'.DS.$fileName;
         }
         return $info;
     }
@@ -384,9 +387,19 @@ class Scene
     //批量删除
     public function deleteScenes($param)
     {
-        $param = [32,39,41];
+        if (empty($param) || !isset($param['ids'])) {
+            return '50001';
+        }
+        if (strpos($param['ids'],',') !== false) {
+            $params = explode(',',$param['ids']);
+        } else {
+            if (!is_numeric($param['ids'])) {
+                return '50002';
+            }
+            $params = [$param['ids']];
+        }
         //构建成更新数组
-        foreach ($param as $key => $val) {
+        foreach ($params as $key => $val) {
             $info[$key] = ['id' => $val,'status' => 3];
         }
         //更新数据
@@ -474,6 +487,30 @@ class Scene
             return false;
         }
         return true;
+    }
+
+    //批量打包下载渠道二维码
+    public function downloadScenes($request)
+    {
+
+        $zip = new \ZipArchive();
+        $zipName = time().'_downloadScene.zip';
+        //新建压缩包
+        if ($zip->open(self::ZIP_PATH.$zipName,\ZipArchive::CREATE) !== true) {
+            return false;
+        }
+        //把图片一张张压缩进去
+        $handle = opendir(self::QRCODE_PATH);
+        while (($filename = readdir($handle)) !== false) {
+            if ($filename != '.' && $filename != '..') {
+                $ext = getExtension($filename);
+                if ($ext && ($ext == 'jpg' || $ext == 'jpeg')) {
+                    $zip->addFile(self::QRCODE_PATH.$filename,$filename);
+                }
+            }
+        }
+        $zip->close();
+        return ['url'   => $request->root(true).DS.'zip'.DS.$zipName];
     }
 
 

@@ -334,8 +334,8 @@ class Admin extends BaseAdmin
      *         name="ids",
      *         in="formData",
      *         description="渠道表id数组",
-     *         required=false,
-     *         type="array"
+     *         required=true,
+     *         type="string"
      *     ),
      *     @SWG\Response(
      *         response=405,
@@ -403,10 +403,41 @@ class Admin extends BaseAdmin
         return json($res);
     }
 
+    /**
+     * @SWG\Post(
+     *     path="/scene/admin/downloadScenes",
+     *     tags={"Scene"},
+     *     operationId="downloadScenes",
+     *     summary="打包下载渠道信息",
+     *     description="打包下载渠道信息,zip格式",
+     *     consumes={"multipart/form-data"},
+     *     produces={"multipart/form-data"},
+     *     @SWG\Parameter(
+     *         name="SESSION_ID",
+     *         in="formData",
+     *         description="令牌号",
+     *         required=true,
+     *         type="string"
+     *     ),
+     *     @SWG\Response(
+     *         response=405,
+     *         description="Invalid input",
+     *     ),
+     * )
+     */
     //批量打包下载渠道
     public function downloadScenes()
     {
+        $Scene = new Scene($this->loginLogInfo);
+        $ret   = $Scene->downloadScenes($this->request);
 
+        //记录日志
+        $operatorInfo = $Scene->getInitInfo();
+        WriteLog::writeLog($ret,$operatorInfo,'scene','o',$this->request->post());
+
+        //输出
+        $res = Status::processStatus($ret);
+        return json($res);
     }
 
 

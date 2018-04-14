@@ -23,5 +23,14 @@ function createSESSION_ID($userId,$password,$time)
     return md5($userId.$password.$time);
 }
 
+function getExtension($filename)
+{
+    $index = strrpos($filename,'.');
+    if ($index !== false) {
+        return substr($filename,$index+1);
+    }
+    return false;
+}
+
 
 
