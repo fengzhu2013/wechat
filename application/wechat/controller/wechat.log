@@ -1,216 +1,356 @@
-[2018-04-13 12:54:43] NULL.INFO: >>>>>>>>
-POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+[2018-04-18 16:47:24] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=453377491&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=c286500873ee0b61109437e6b5c6b92557eea500&timestamp=1524041239","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041239</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>"} 
+[2018-04-18 16:47:24] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[news]]></MsgType><ArticleCount>2</ArticleCount><Articles><item id=\"0\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item><item id=\"1\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item></Articles><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041244</CreateTime></xml>"} 
+[2018-04-18 16:47:42] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1216210765&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=1a51d6672cd2f349afa8864020ee12423a9dc01d&timestamp=1524041257","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041257</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[world]]></Content>
+<MsgId>6545707357008799285</MsgId>
+</xml>"} 
+[2018-04-18 16:47:42] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[hadfadfa]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041262</CreateTime></xml>"} 
+[2018-04-18 16:47:49] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1226811556&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=ff0087fc6f49e466aecb5e59b020de8697204155&timestamp=1524041265","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041264</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[nnj]]></Content>
+<MsgId>6545707387073570361</MsgId>
+</xml>"} 
+[2018-04-18 16:47:49] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[image]]></MsgType><Image><MediaId><![CDATA[3rWvOg_4rmTQbJ6S1wHOhzA7GgR45R040QvSLqI8vIQ]]></MediaId></Image><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041269</CreateTime></xml>"} 
+[2018-04-18 16:48:44] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1026510430&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=df07f554aa11fefcbeda67c4aa57ab88757c27c0&timestamp=1524041319","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041319</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[jj]]></Content>
+<MsgId>6545707623296771664</MsgId>
+</xml>"} 
+[2018-04-18 16:48:44] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[image]]></MsgType><Image><MediaId><![CDATA[3rWvOg_4rmTQbJ6S1wHOhzA7GgR45R040QvSLqI8vIQ]]></MediaId></Image><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041324</CreateTime></xml>"} 
+[2018-04-18 16:48:50] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=274526626&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=77a09d2067e22b9e0e77257c49cf64833b8de226&timestamp=1524041326","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041326</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>"} 
+[2018-04-18 16:48:50] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[success]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041330</CreateTime></xml>"} 
+[2018-04-18 16:48:56] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=38543170&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=786776b94d027c18ab40f1f86a10f007c1263d37&timestamp=1524041331","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041331</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>"} 
+[2018-04-18 16:48:56] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[news]]></MsgType><ArticleCount>2</ArticleCount><Articles><item id=\"0\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item><item id=\"1\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item></Articles><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041336</CreateTime></xml>"} 
+[2018-04-18 16:49:16] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=629695331&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=5034ac538403f303244187e435918276133fee8a&timestamp=1524041352","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041351</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[world]]></Content>
+<MsgId>6545707760735725157</MsgId>
+</xml>"} 
+[2018-04-18 16:49:16] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[hadfadfa]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041356</CreateTime></xml>"} 
+[2018-04-18 16:49:30] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1392289418&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=84890700cce9d04a72c4767e48f2d4150d220c19&timestamp=1524041365","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041365</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[xxx]]></Content>
+<MsgId>6545707820865267307</MsgId>
+</xml>"} 
+[2018-04-18 16:49:30] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[image]]></MsgType><Image><MediaId><![CDATA[3rWvOg_4rmTQbJ6S1wHOhzA7GgR45R040QvSLqI8vIQ]]></MediaId></Image><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041370</CreateTime></xml>"} 
+[2018-04-18 16:49:36] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=612012929&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=7beb2f7ffb048b2c3d515e4c4f6ead351fe18c63&timestamp=1524041371","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041371</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>"} 
+[2018-04-18 16:49:36] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[success]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041376</CreateTime></xml>"} 
+[2018-04-18 16:49:41] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=514686894&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=014e28176a5c2d58fa73caddc36c729f386f1165&timestamp=1524041377","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041377</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>"} 
+[2018-04-18 16:49:42] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[news]]></MsgType><ArticleCount>2</ArticleCount><Articles><item id=\"0\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item><item id=\"1\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item></Articles><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041382</CreateTime></xml>"} 
+[2018-04-18 16:49:48] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1023056776&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=883f249efe1b1dcdca2ca046940fe47ca55a8b6a&timestamp=1524041383","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041383</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[jjj]]></Content>
+<MsgId>6545707898174678644</MsgId>
+</xml>"} 
+[2018-04-18 16:49:48] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[image]]></MsgType><Image><MediaId><![CDATA[3rWvOg_4rmTQbJ6S1wHOhzA7GgR45R040QvSLqI8vIQ]]></MediaId></Image><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041388</CreateTime></xml>"} 
+[2018-04-18 16:52:40] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=249344803&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=9e1979a211b5a861640cda1625e1f48e9d3da05c&timestamp=1524041555","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041555</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>"} 
+[2018-04-18 16:52:40] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[success]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041560</CreateTime></xml>"} 
+[2018-04-18 16:53:09] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1998879316&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=4f26d9a36a3ff1925d7ab5fae84404a0af9e0a4a&timestamp=1524041585","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041585</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>"} 
+[2018-04-18 16:53:10] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[news]]></MsgType><ArticleCount>2</ArticleCount><Articles><item id=\"0\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item><item id=\"1\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item></Articles><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041590</CreateTime></xml>"} 
+[2018-04-18 16:53:25] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=2113292142&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=0ce302a5a0adff9e68b535ee8780b0ce974c2a11&timestamp=1524041600","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524041600</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[hello]]></Content>
+<MsgId>6545708830182582009</MsgId>
+</xml>"} 
+[2018-04-18 16:53:25] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[hadfadfadfh]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524041605</CreateTime></xml>"} 
+[2018-04-18 17:02:05] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1450191331&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=49b7c5b6edd8fdc0c84e8774abe7d1ab90be1090&timestamp=1524042120","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524042120</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://baidu.com]]></EventKey>
+<MenuId>439056492</MenuId>
+</xml>"} 
+[2018-04-18 17:02:05] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[success]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524042125</CreateTime></xml>"} 
+[2018-04-18 17:32:45] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1009604306&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=8cf96e0888814057de3f02b3cc943cf06ab037f8&timestamp=1524043960","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524043960</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://baidu.com]]></EventKey>
+<MenuId>439056492</MenuId>
+</xml>"} 
+[2018-04-18 17:32:45] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[success]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524043965</CreateTime></xml>"} 
+[2018-04-18 17:32:58] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1403115464&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=1309f32f995fd424f92c61dd74c8c8a7bf1ec9ca&timestamp=1524043974","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524043974</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf101]]></EventKey>
+</xml>"} 
+[2018-04-18 17:32:58] NULL.ERROR: 0: property not exists:app\wechat\model\Menu->menu_value {"code":0,"message":"property not exists:app\\wechat\\model\\Menu->menu_value","file":"D:\\Demo\\wechat\\thinkphp\\library\\think\\Model.php","line":432} 
+[2018-04-18 17:32:58] NULL.DEBUG: Server response created: {"content":"success"} 
+[2018-04-18 17:38:56] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1547641269&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=f7e699a8d7c1339ffe95b4663ea239c57fb510ae&timestamp=1524044332","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524044332</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf101]]></EventKey>
+</xml>"} 
+[2018-04-18 17:38:57] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[click]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524044337</CreateTime></xml>"} 
+[2018-04-18 17:39:09] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=220859591&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=e02948a3a8bbcd990f9c1eadc59998c986bb1bdd&timestamp=1524044344","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524044344</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf202]]></EventKey>
+</xml>"} 
+[2018-04-18 17:39:10] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[click]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524044350</CreateTime></xml>"} 
+[2018-04-18 17:39:24] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1038699893&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=df945b5a8367abec2aa047cea278edcf4c9aab3a&timestamp=1524044360","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524044360</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf301]]></EventKey>
+</xml>"} 
+[2018-04-18 17:39:25] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[click]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524044365</CreateTime></xml>"} 
+[2018-04-18 17:45:19] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1437501754&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=ffbf1010afc9639e2a853aa60990750acbe48dc0&timestamp=1524044714","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524044714</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf101]]></EventKey>
+</xml>"} 
+[2018-04-18 17:45:25] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1077227767&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=fd1be44e170cd30bbab7c6af8425703ac0e79d6c&timestamp=1524044720","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524044720</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf101]]></EventKey>
+</xml>"} 
+[2018-04-18 17:46:41] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=50355718&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=35407dd5ce3a3d9ea967b7a52c31ee2ab5474c69&timestamp=1524044796","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524044796</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>"} 
+[2018-04-18 17:46:41] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[success]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524044801</CreateTime></xml>"} 
+[2018-04-18 17:46:48] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=756936423&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=e8f0fa56d809676b211e5ea5fcf1e4d0bc0eafbc&timestamp=1524044803","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524044803</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>"} 
+[2018-04-18 17:46:48] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[news]]></MsgType><ArticleCount>2</ArticleCount><Articles><item id=\"0\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item><item id=\"1\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item></Articles><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524044808</CreateTime></xml>"} 
+[2018-04-18 17:46:52] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1105787345&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=b69b005803187ab4e34aba40260b5a933653c7b8&timestamp=1524044807","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524044807</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf101]]></EventKey>
+</xml>"} 
+[2018-04-18 17:46:52] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[text]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524044812</CreateTime></xml>"} 
+[2018-04-18 17:47:00] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1855282641&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=64004212e7ffe06631b493e04985041383ed5d16&timestamp=1524044816","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524044816</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf202]]></EventKey>
+</xml>"} 
+[2018-04-18 17:47:01] NULL.ERROR: 0: count(): Parameter must be an array or an object that implements Countable {"code":0,"message":"count(): Parameter must be an array or an object that implements Countable","file":"D:\\Demo\\wechat\\application\\wechat\\logic\\ResponseMsg.php","line":145} 
+[2018-04-18 17:47:01] NULL.DEBUG: Server response created: {"content":"success"} 
+[2018-04-18 17:47:22] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=950546288&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=3540f4d18deff382083ef721174c741704aa98ec&timestamp=1524044838","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524044837</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf202]]></EventKey>
+</xml>"} 
+[2018-04-18 17:47:22] NULL.ERROR: 0: count(): Parameter must be an array or an object that implements Countable {"code":0,"message":"count(): Parameter must be an array or an object that implements Countable","file":"D:\\Demo\\wechat\\application\\wechat\\logic\\ResponseMsg.php","line":145} 
+[2018-04-18 17:47:22] NULL.DEBUG: Server response created: {"content":"success"} 
+[2018-04-18 17:49:54] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1062954651&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=bc577f71fa5bc3275451b5f8974195f7940b011d&timestamp=1524044989","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524044989</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf202]]></EventKey>
+</xml>"} 
+[2018-04-18 17:49:54] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[image]]></MsgType><Image><MediaId><![CDATA[3rWvOg_4rmTQbJ6S1wHOhzA7GgR45R040QvSLqI8vIQ]]></MediaId></Image><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524044994</CreateTime></xml>"} 
+[2018-04-18 17:50:00] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=270943231&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=938237a569b34ab59d66680afee8d937656b0904&timestamp=1524044995","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524044995</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf301]]></EventKey>
+</xml>"} 
+[2018-04-18 17:50:00] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[news]]></MsgType><ArticleCount>1</ArticleCount><Articles><item id=\"0\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item></Articles><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524045000</CreateTime></xml>"} 
+[2018-04-18 17:52:48] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1977412544&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=e179b991a5e8126333d95ef2aa8937e59cb55a16&timestamp=1524045163","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524045163</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf202]]></EventKey>
+</xml>"} 
+[2018-04-18 17:52:48] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[image]]></MsgType><Image><MediaId><![CDATA[3rWvOg_4rmTQbJ6S1wHOhzA7GgR45R040QvSLqI8vIQ]]></MediaId></Image><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524045168</CreateTime></xml>"} 
+[2018-04-18 17:53:57] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=173845757&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=0c65d0ac5fd39e6acf8e448c27fdd93131ab930d&timestamp=1524045232","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524045232</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>"} 
+[2018-04-18 17:53:57] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[success]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524045237</CreateTime></xml>"} 
+[2018-04-18 17:54:17] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=751200000&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=5bb97834ee80355e5272624bb3cd116cbf32b02e&timestamp=1524045252","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524045252</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>"} 
+[2018-04-18 17:54:17] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[news]]></MsgType><ArticleCount>2</ArticleCount><Articles><item id=\"0\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item><item id=\"1\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item></Articles><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524045257</CreateTime></xml>"} 
+[2018-04-18 17:54:35] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1730780053&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=4a6a13b33b0d9dfe4c21b8bd94b8a1171429afda&timestamp=1524045270","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524045270</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf202]]></EventKey>
+</xml>"} 
+[2018-04-18 17:54:35] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[image]]></MsgType><Image><MediaId><![CDATA[3rWvOg_4rmTQbJ6S1wHOhzA7GgR45R040QvSLqI8vIQ]]></MediaId></Image><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524045275</CreateTime></xml>"} 
+[2018-04-18 18:12:58] NULL.DEBUG: Request received: {"method":"GET","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?echostr=17486438269491585015&nonce=1708684096&signature=243c8ca7dac0025c231c6e1fe0354c5077075c11&timestamp=1524046373","content-type":null,"content":""} 
+[2018-04-18 18:12:58] NULL.ERROR: 0: Undefined index: MsgType {"code":0,"message":"Undefined index: MsgType","file":"D:\\Demo\\wechat\\application\\wechat\\controller\\Index.php","line":78} 
+[2018-04-18 18:12:58] NULL.DEBUG: Server response created: {"content":"17486438269491585015"} 
+[2018-04-18 18:13:02] NULL.DEBUG: Request received: {"method":"GET","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?echostr=62098111866067629&nonce=2652773293&signature=552b4d8627c86aeae2973623dee263a83a8593df&timestamp=1524046377","content-type":null,"content":""} 
+[2018-04-18 18:13:02] NULL.ERROR: 0: Undefined index: MsgType {"code":0,"message":"Undefined index: MsgType","file":"D:\\Demo\\wechat\\application\\wechat\\controller\\Index.php","line":78} 
+[2018-04-18 18:13:02] NULL.DEBUG: Server response created: {"content":"62098111866067629"} 
+[2018-04-18 18:13:25] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1680007727&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=7a8932132f0eec627adb0087377140c6ff5ef76d&timestamp=1524046400","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524046400</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>"} 
+[2018-04-18 18:13:25] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[success]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524046405</CreateTime></xml>"} 
+[2018-04-18 18:13:34] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=397890945&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=869761786657dd1d239414fe34d47d5cdfa3ed00&timestamp=1524046409","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524046409</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>"} 
+[2018-04-18 18:13:34] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[news]]></MsgType><ArticleCount>2</ArticleCount><Articles><item id=\"0\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item><item id=\"1\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item></Articles><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524046414</CreateTime></xml>"} 
+[2018-04-18 18:13:37] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1338826153&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=9826df01eb69f633723fbaa93fad9fdb5c5f2ccd&timestamp=1524046413","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524046413</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf101]]></EventKey>
+</xml>"} 
+[2018-04-18 18:13:38] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[text]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524046418</CreateTime></xml>"} 
+[2018-04-18 18:13:41] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=321489095&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=d1a7c96ee94a0e31dd815057c4203e1a8a3915a4&timestamp=1524046416","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524046416</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://baidu.com]]></EventKey>
+<MenuId>439056492</MenuId>
+</xml>"} 
+[2018-04-18 18:13:41] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[success]]></Content><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524046421</CreateTime></xml>"} 
+[2018-04-18 18:13:48] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=2090333164&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=b92935ced7a48d9b2b9ffa0a29de37a9cb9be581&timestamp=1524046423","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524046423</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf202]]></EventKey>
+</xml>"} 
+[2018-04-18 18:13:48] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[image]]></MsgType><Image><MediaId><![CDATA[3rWvOg_4rmTQbJ6S1wHOhzA7GgR45R040QvSLqI8vIQ]]></MediaId></Image><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524046428</CreateTime></xml>"} 
+[2018-04-18 18:13:51] NULL.DEBUG: Request received: {"method":"POST","uri":"http://edu.natapp1.cc/wechat/public/wechat/index/connectWeChat?nonce=1118015497&openid=ohnwgw5RXi1B_dwyETYxdDB56ne4&signature=a85069d08f61c61f06e390267f62b90a25d939cc&timestamp=1524046426","content-type":"xml","content":"<xml><ToUserName><![CDATA[gh_1fe99215b718]]></ToUserName>
+<FromUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></FromUserName>
+<CreateTime>1524046426</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[tf301]]></EventKey>
+</xml>"} 
+[2018-04-18 18:13:51] NULL.DEBUG: Server response created: {"content":"<xml><MsgType><![CDATA[news]]></MsgType><ArticleCount>1</ArticleCount><Articles><item id=\"0\"><Title><![CDATA[xxx]]></Title><Description><![CDATA[test something!]]></Description><Url><![CDATA[http://mp.weixin.qq.com/s?__biz=MzI3MzY4NjE1MA==&mid=100000007&idx=1&sn=463c8565a934002773364b20b0017b5f&chksm=6b1ecaee5c6943f8290802a5eb44ae54649789bf91a473196389fddf7d13287e356e8a752fde#rd]]></Url><PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/6nR2NibOuvVoGfzunOSIsFcD367yBrQtmlIdrZ3HlomulQ5HeyVm1MXcMpeJjfZhZ78ITeicxs57MjFXgOMxxrlA/0?wx_fmt=jpeg]]></PicUrl></item></Articles><ToUserName><![CDATA[ohnwgw5RXi1B_dwyETYxdDB56ne4]]></ToUserName><FromUserName><![CDATA[gh_1fe99215b718]]></FromUserName><CreateTime>1524046431</CreateTime></xml>"} 
+[2018-04-19 14:32:01] NULL.INFO: >>>>>>>>
+GET /cgi-bin/menu/delete?access_token=8_k-qzJtvmeC3QHK1YGoFNf-1dj30qAM_u9cWU3TXRbjMiKzrNuWeh8eFnCyonPVxgCr7Vs0m3_LMEZ1vAosbBLIYlmPdyarOMdMYN4WObodVpoJgVUAnFJL2kMPyMnC6-uwrTWc21l22aeEMwEMGjAEAVDX HTTP/1.1
 Host: api.weixin.qq.com
-Content-Length: 72
 User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
-Content-Type: application/json
 
-{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":25}}}
+
 <<<<<<<<
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Type: application/json; encoding=utf-8
-Date: Fri, 13 Apr 2018 04:54:42 GMT
-Content-Length: 167
+Date: Thu, 19 Apr 2018 06:31:55 GMT
+Content-Length: 27
 
-{"ticket":"gQH58DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAycE1ndW8wNlljdzMxMDAwMDAwM2QAAgQSONBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02pMguo06Ycw310000003d"}
+{"errcode":0,"errmsg":"ok"}
 --------
 NULL  
-[2018-04-13 14:27:02] NULL.INFO: >>>>>>>>
-POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
+[2018-04-19 14:37:55] NULL.INFO: >>>>>>>>
+POST /cgi-bin/menu/create?access_token=8_k-qzJtvmeC3QHK1YGoFNf-1dj30qAM_u9cWU3TXRbjMiKzrNuWeh8eFnCyonPVxgCr7Vs0m3_LMEZ1vAosbBLIYlmPdyarOMdMYN4WObodVpoJgVUAnFJL2kMPyMnC6-uwrTWc21l22aeEMwEMGjAEAVDX HTTP/1.1
 Host: api.weixin.qq.com
-Content-Length: 72
+Content-Length: 243
 User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
 Content-Type: application/json
 
-{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":26}}}
+{"button":[{"name":"menu1","type":"click","key":"tf101"},{"sub_button":[{"name":"menu22","type":"view","url":"https:\/\/baidu.com"},{"name":"menu23","type":"click","key":"tf202"}],"name":"menu2"},{"name":"menu3","type":"click","key":"tf301"}]}
 <<<<<<<<
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Type: application/json; encoding=utf-8
-Date: Fri, 13 Apr 2018 06:27:02 GMT
-Content-Length: 167
+Date: Thu, 19 Apr 2018 06:37:49 GMT
+Content-Length: 27
 
-{"ticket":"gQGW8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAySDFXTXBaNlljdzMxMDAwME0wM0IAAgS2TdBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02H1WMpZ6Ycw310000M03B"}
---------
-NULL  
-[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
-POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
-Host: api.weixin.qq.com
-Content-Length: 72
-User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
-Content-Type: application/json
-
-{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":27}}}
-<<<<<<<<
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Type: application/json; encoding=utf-8
-Date: Fri, 13 Apr 2018 06:28:37 GMT
-Content-Length: 167
-
-{"ticket":"gQEm8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyNUhfMHBMNlljdzMxMDAwMHcwM0cAAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/025H_0pL6Ycw310000w03G"}
---------
-NULL  
-[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
-POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
-Host: api.weixin.qq.com
-Content-Length: 72
-User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
-Content-Type: application/json
-
-{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":28}}}
-<<<<<<<<
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Type: application/json; encoding=utf-8
-Date: Fri, 13 Apr 2018 06:28:37 GMT
-Content-Length: 167
-
-{"ticket":"gQEP8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyTUZCcnBRNlljdzMxMDAwME0wM0gAAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02MFBrpQ6Ycw310000M03H"}
---------
-NULL  
-[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
-POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
-Host: api.weixin.qq.com
-Content-Length: 72
-User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
-Content-Type: application/json
-
-{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":29}}}
-<<<<<<<<
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Type: application/json; encoding=utf-8
-Date: Fri, 13 Apr 2018 06:28:37 GMT
-Content-Length: 167
-
-{"ticket":"gQHq8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyZDVQdm9JNlljdzMxMDAwMGcwM0QAAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02d5PvoI6Ycw310000g03D"}
---------
-NULL  
-[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
-POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
-Host: api.weixin.qq.com
-Content-Length: 72
-User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
-Content-Type: application/json
-
-{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":30}}}
-<<<<<<<<
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Type: application/json; encoding=utf-8
-Date: Fri, 13 Apr 2018 06:28:37 GMT
-Content-Length: 167
-
-{"ticket":"gQFO8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyLWU0WHAxNlljdzMxMDAwMDAwM28AAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02-e4Xp16Ycw310000003o"}
---------
-NULL  
-[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
-POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
-Host: api.weixin.qq.com
-Content-Length: 72
-User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
-Content-Type: application/json
-
-{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":31}}}
-<<<<<<<<
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Type: application/json; encoding=utf-8
-Date: Fri, 13 Apr 2018 06:28:37 GMT
-Content-Length: 167
-
-{"ticket":"gQF58DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyd2tsanBxNlljdzMxMDAwMDAwM2oAAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02wkljpq6Ycw310000003j"}
---------
-NULL  
-[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
-POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
-Host: api.weixin.qq.com
-Content-Length: 72
-User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
-Content-Type: application/json
-
-{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":32}}}
-<<<<<<<<
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Type: application/json; encoding=utf-8
-Date: Fri, 13 Apr 2018 06:28:37 GMT
-Content-Length: 167
-
-{"ticket":"gQGF8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyYkF5cG9mNlljdzMxMDAwMGcwM18AAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02bAypof6Ycw310000g03_"}
---------
-NULL  
-[2018-04-13 14:28:37] NULL.INFO: >>>>>>>>
-POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
-Host: api.weixin.qq.com
-Content-Length: 72
-User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
-Content-Type: application/json
-
-{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":33}}}
-<<<<<<<<
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Type: application/json; encoding=utf-8
-Date: Fri, 13 Apr 2018 06:28:37 GMT
-Content-Length: 167
-
-{"ticket":"gQFC8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyMXdEVHAyNlljdzMxMDAwMDAwM1gAAgQVTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/021wDTp26Ycw310000003X"}
---------
-NULL  
-[2018-04-13 14:28:38] NULL.INFO: >>>>>>>>
-POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
-Host: api.weixin.qq.com
-Content-Length: 72
-User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
-Content-Type: application/json
-
-{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":34}}}
-<<<<<<<<
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Type: application/json; encoding=utf-8
-Date: Fri, 13 Apr 2018 06:28:38 GMT
-Content-Length: 167
-
-{"ticket":"gQFT8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAybGN5cG93NlljdzMxMDAwMGcwM1MAAgQWTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02lcypow6Ycw310000g03S"}
---------
-NULL  
-[2018-04-13 14:28:38] NULL.INFO: >>>>>>>>
-POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
-Host: api.weixin.qq.com
-Content-Length: 72
-User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
-Content-Type: application/json
-
-{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":35}}}
-<<<<<<<<
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Type: application/json; encoding=utf-8
-Date: Fri, 13 Apr 2018 06:28:38 GMT
-Content-Length: 167
-
-{"ticket":"gQHr8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyNVBGS3ByNlljdzMxMDAwMGcwM2EAAgQWTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/025PFKpr6Ycw310000g03a"}
---------
-NULL  
-[2018-04-13 14:28:38] NULL.INFO: >>>>>>>>
-POST /cgi-bin/qrcode/create?access_token=8_d0iy_3WfqJZwF71ji3MCSYXoPxO0_EkaHvfgM3ZVILsacX7v_ZOSmndF79kIKJFWqr5dyBcE5WJ6l1o_wNywiyPAPGGZVwZ2nsvz9soy1fZAkZwIQwruVINrbf_-pEret04HkqHOZpYabh5ZWBKgAIACHQ HTTP/1.1
-Host: api.weixin.qq.com
-Content-Length: 72
-User-Agent: GuzzleHttp/6.3.2 curl/7.57.0 PHP/7.2.3
-Content-Type: application/json
-
-{"action_name":"QR_LIMIT_SCENE","action_info":{"scene":{"scene_id":36}}}
-<<<<<<<<
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Type: application/json; encoding=utf-8
-Date: Fri, 13 Apr 2018 06:28:38 GMT
-Content-Length: 167
-
-{"ticket":"gQEy8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyZEtDRHBfNlljdzMxMDAwMDAwM0QAAgQWTtBaAwQAAAAA","url":"http:\/\/weixin.qq.com\/q\/02dKCDp_6Ycw310000003D"}
+{"errcode":0,"errmsg":"ok"}
 --------
 NULL  

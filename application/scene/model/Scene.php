@@ -33,7 +33,7 @@ class Scene extends Model
     }
 
     /**
-     * 获得一定数量
+     * 获得一定数量的待领取二维码信息
      * @param int $count
      * @return array
      */
@@ -89,6 +89,27 @@ class Scene extends Model
         $where  = self::$formatObj->formatArrKey($where,'i');
         return self::where($where)->update($data);
     }
+
+
+    /**
+     * @param int $status
+     * @return array
+     */
+    public function getAllByStatus($status = 1):array
+    {
+        $ret = [];
+        $list = self::where('status',$status)->field('scene_id')->select();
+        if (!$list) {
+            return $ret;
+        }
+        foreach ($list as $val) {
+            $ret[] = self::$formatObj->formatArrKey($val->toArray());
+        }
+        return $ret;
+    }
+
+
+
 
 
 }

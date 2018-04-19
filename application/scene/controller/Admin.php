@@ -5,6 +5,7 @@ use app\common\controller\BaseAdmin;
 use app\common\service\Status;
 use app\common\service\WriteLog;
 use app\scene\logic\Scene;
+use think\Loader;
 
 class Admin extends BaseAdmin
 {
@@ -53,7 +54,14 @@ class Admin extends BaseAdmin
     //获得渠道列表
     public function getSceneList()
     {
-        $Scene  = new Scene($this->loginLogInfo);
+        //验证数据
+        $validate   = Loader::validate('Scene');
+        if (!$validate->checkGetSceneList($this->param)) {
+            return json(Status::processValidateMsg($validate->getError()));
+        }
+
+        //逻辑处理
+        $Scene  = new Scene();
         $ret    = $Scene->getSceneList($this->param);
 
         //不记录日志
@@ -151,12 +159,19 @@ class Admin extends BaseAdmin
     //添加单个渠道
     public function addOneScene()
     {
+        //验证数据
+        $validate = Loader::validate('SceneInfo');
+        if (!$validate->check($this->param)) {
+            return json(Status::processValidateMsg($validate->getError()));
+        }
+
+        //逻辑处理
         $Scene  = new Scene($this->loginLogInfo);
         $ret    = $Scene->addOneScene($this->param);
 
         //写日志
         $operatorInfo = $Scene->getInitInfo();
-        WriteLog::writeLog($ret,$operatorInfo,'scene_info','a',$this->param);
+        WriteLog::writeLog($ret,$operatorInfo,WriteLog::SCENE_INFO,WriteLog::ADD,$this->param);
 
         //返回数据
         $res = Status::processStatus($ret);
@@ -258,12 +273,19 @@ class Admin extends BaseAdmin
     //修改渠道
     public function modifyScene()
     {
+        //验证信息
+        $validate = Loader::validate('SceneInfo');
+        if (!$validate->checkModifyScene($this->param)) {
+            return json(Status::processValidateMsg($validate->getError()));
+        }
+
+        //逻辑处理
         $Scene  = new Scene($this->loginLogInfo);
         $ret    = $Scene->modifyScene($this->param);
 
         //记录日志
         $operatorInfo = $Scene->getInitInfo();
-        WriteLog::writeLog($ret,$operatorInfo,'scene_info','u',$this->request->post());
+        WriteLog::writeLog($ret,$operatorInfo,WriteLog::SCENE_INFO,WriteLog::UPDATE,$this->request->post());
 
         //返回数据
         $res = Status::processStatus($ret);
@@ -302,12 +324,19 @@ class Admin extends BaseAdmin
     //删除单个渠道
     public function deleteOneScene()
     {
+        //验证字段
+        $validate = Loader::validate('Scene');
+        if (!$validate->check($this->param,$validate->getRule('modifyRule'))) {
+            return json(Status::processValidateMsg($validate->getError()));
+        }
+
+        //逻辑处理
         $Scene  = new Scene($this->loginLogInfo);
         $ret    = $Scene->deleteOneScene($this->param);
 
         //记录日志
         $operatorInfo = $Scene->getInitInfo();
-        WriteLog::writeLog($ret,$operatorInfo,'scene','d',$this->request->post());
+        WriteLog::writeLog($ret,$operatorInfo,WriteLog::SCENE,WriteLog::DELETE,$this->request->post());
 
         //返回数据
         $res = Status::processStatus($ret);
@@ -346,13 +375,20 @@ class Admin extends BaseAdmin
     //批量删除渠道
     public function deleteScenes()
     {
+        //验证数据
+        $validate   = Loader::validate('Scene');
+        if (!$validate->checkDeleteScenes($this->param)) {
+            return json(Status::processValidateMsg($validate->getError()));
+        }
+
+        //逻辑处理
         $Scene  = new Scene($this->loginLogInfo);
         $ret    = $Scene->deleteScenes($this->param);
 
         //写日志
         $operatorInfo = $Scene->getInitInfo();
         $msg          = $Scene->getActionMsg();
-        WriteLog::writeLog($ret,$operatorInfo,'scene','m_d',$msg);
+        WriteLog::writeLog($ret,$operatorInfo,WriteLog::SCENE,WriteLog::MORE_DELETE,$msg);
 
         //返回信息
         $res = Status::processStatus($ret);
@@ -397,7 +433,7 @@ class Admin extends BaseAdmin
         //记录日志
         $operatorInfo = $Scene->getInitInfo();
         $msg          = $Scene->getActionMsg();
-        WriteLog::writeLog($ret,$operatorInfo,'scene_info','m_a',$msg,$this->userId);
+        WriteLog::writeLog($ret,$operatorInfo,WriteLog::SCENE_INFO,WriteLog::MORE_ADD,$msg,$this->userId);
         //返回数据
         $res = Status::processStatus($ret);
         return json($res);
@@ -433,7 +469,7 @@ class Admin extends BaseAdmin
 
         //记录日志
         $operatorInfo = $Scene->getInitInfo();
-        WriteLog::writeLog($ret,$operatorInfo,'scene','o',$this->request->post());
+        WriteLog::writeLog($ret,$operatorInfo,WriteLog::SCENE,WriteLog::OUTPUT,$this->request->post());
 
         //输出
         $res = Status::processStatus($ret);

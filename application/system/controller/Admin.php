@@ -6,6 +6,7 @@ use app\common\service\Status;
 use app\common\service\WriteLog;
 use app\system\logic\System;
 use app\system\model\AdminLog;
+use think\Loader;
 
 class Admin extends BaseAdmin
 {
@@ -43,8 +44,8 @@ class Admin extends BaseAdmin
         $logInfo = [
             'userId'        => $this->userId,
             'objectId'      => $this->loginLogInfo['objectId'],
-            'objectType'    => 'admin',
-            'action'        => 'r',
+            'objectType'    => WriteLog::ADMIN,
+            'action'        => WriteLog::REMOVE,
             'createTime'    => $this->timestamp,
             'msg'           => json_encode($this->request->post()),
             'status'        => 2
@@ -113,13 +114,18 @@ class Admin extends BaseAdmin
     //添加微信系统必要信息
     public function addSystemInfo()
     {
+        //验证信息
+        $validate = Loader::validate('SystemInfo');
+        if (!$validate->check($this->param)) {
+            return json(Status::processValidateMsg($validate->getError()));     //提示传参不符合格式要求
+        }
         //添加信息
         $System = new System($this->loginLogInfo);
         $ret    = $System->addSystemInfo($this->param);
 
         //记录操作日志
         $operatorInfo = $System->getInitInfo();
-        WriteLog::writeLog($ret,$operatorInfo,'system','a',$this->request->post());
+        WriteLog::writeLog($ret,$operatorInfo,WriteLog::SYSTEM_INFO,WriteLog::ADD,$this->request->post());
 
         //返回数据
         $res = Status::processStatus($ret);
@@ -186,12 +192,19 @@ class Admin extends BaseAdmin
     //修改微信系统信息
     public function modifySystemInfo()
     {
+        //检验信息
+        $validate = Loader::validate('SystemInfo');
+        if (!$validate->checkModifySystemInfo($this->param)) {
+            return json(Status::processValidateMsg($validate->getError()));
+        }
+
+        //逻辑处理
         $System = new System($this->loginLogInfo);
         $ret    = $System->modifySystemInfo($this->param);
 
         //记录操作日志
         $operatorInfo = $System->getInitInfo();
-        WriteLog::writeLog($ret,$operatorInfo,'system','u',$this->request->post());
+        WriteLog::writeLog($ret,$operatorInfo,WriteLog::SYSTEM_INFO,WriteLog::UPDATE,$this->request->post());
 
         //返回数据
         $res = Status::processStatus($ret);
@@ -224,7 +237,7 @@ class Admin extends BaseAdmin
     public function getSystemInfo()
     {
         $System = new System();
-        $ret    = $System->getSystemInfo($this->param);
+        $ret    = $System->getSystemInfo();
 
         //不记录操作日志
 
@@ -265,7 +278,7 @@ class Admin extends BaseAdmin
     //获得用户信息
     public function getUserInfo()
     {
-        $System = new System($this->loginLogInfo);
+        $System = new System();
         $ret    = $System->getUserInfo($this->param);
 
         //不记录日志信息
@@ -329,12 +342,17 @@ class Admin extends BaseAdmin
     //修改用户信息
     public function modifyUserInfo()
     {
+        $validate = Loader::validate('Admin');
+        if (!$validate->checkModifyAdminInfo($this->param)) {
+            return json(Status::processValidateMsg($validate->getError()));
+        }
+
         $System = new System($this->loginLogInfo);
         $ret    = $System->modifyUserInfo($this->param);
 
         //记录日志
         $operatorInfo = $System->getInitInfo();
-        WriteLog::writeLog($ret,$operatorInfo,'admin','u',$this->request->post());
+        WriteLog::writeLog($ret,$operatorInfo,WriteLog::ADMIN,WriteLog::UPDATE,$this->request->post());
 
         //返回信息
         $res = Status::processStatus($ret);
@@ -388,12 +406,19 @@ class Admin extends BaseAdmin
     //添加管理员
     public function addAdminUser()
     {
+        //验证数据
+        $validate = Loader::validate("Admin");
+        if (!$validate->checkAddAdminUser($this->param)) {
+            return json(Status::processValidateMsg($validate->getError()));
+        }
+
+        //逻辑处理
         $System = new System($this->loginLogInfo);
         $ret    = $System->addAdminUser($this->param);
 
         //记录日志
         $operatorInfo = $System->getInitInfo();
-        WriteLog::writeLog($ret,$operatorInfo,'admin','a',$this->request->post());
+        WriteLog::writeLog($ret,$operatorInfo,WriteLog::ADMIN,WriteLog::ADD,$this->request->post());
 
         //返回数据
         $res = Status::processStatus($ret);
@@ -440,7 +465,14 @@ class Admin extends BaseAdmin
     //获得管理员列表
     public function getAdminList()
     {
-        $System = new System($this->loginLogInfo);
+        //验证数据
+        $validate = Loader::validate('Admin');
+        if (!$validate->checkGetAdminList($this->param)) {
+            return json(Status::processValidateMsg($validate->getError()));
+        }
+
+        //逻辑处理
+        $System = new System();
         $ret    = $System->getAdminList($this->param);
 
         //不用记录日志

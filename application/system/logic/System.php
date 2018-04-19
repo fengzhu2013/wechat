@@ -3,78 +3,21 @@ namespace app\system\logic;
 
 
 use app\common\logic\ArrayTool;
+use app\common\logic\BaseLogic;
 use app\system\model\Admin;
 use app\system\User\User;
 use think\Loader;
 use app\system\model\SystemInfo;
 
-class System
+class System extends BaseLogic
 {
     protected $request;
 
-    protected $userId;
-
-    protected $objectId;
-
-    /**
-     * 登陆身份类型,1-普通，2-超管
-     * @var
-     */
-    private $loginType;
-
-    /**
-     * 登陆信息
-     * @var array
-     */
-    private $loginInfo = [];
-
-    /**
-     * 时间戳
-     * @var int
-     */
-    private $timestamp;
 
     public function __construct($loginLogInfo = [])
     {
-        $this->timestamp = time();
-        if ($loginLogInfo) {
-            @$this->userId = $loginLogInfo['userId'];
-            //通过用户id获得登录者管理员个人信息
-            $Admin = new Admin();
-            $this->loginInfo = $Admin::getSelf(['userId' => $this->userId]);
+        parent::__construct($loginLogInfo,true);
 
-            //初始化登陆信息
-            $this->initLoginInfo();
-        }
-    }
-
-    //初始化登陆信息
-    private function initLoginInfo()
-    {
-        $this->loginType = $this->loginInfo['adminPower'];
-    }
-
-    //初始化日志信息
-    private function initLog($info)
-    {
-        if (isset($info['userId'])) {
-            $this->userId = $info['userId'];
-        }
-        $this->objectId = $info['id'];
-    }
-
-
-    /**
-     * 获得日志必要信息
-     * @return array
-     */
-    public function getInitInfo()
-    {
-        return [
-            'userId'        => $this->userId,
-            'objectId'      => $this->objectId,
-            'createTime'    => $this->timestamp,
-        ];
     }
 
     //添加微信系统必要信息，如appid等
@@ -83,12 +26,6 @@ class System
         //是否超管
         if ($this->loginType != 2) {
             return '30005';     //提示权限不够
-        }
-
-        //验证信息
-        $validate = Loader::validate('SystemInfo');
-        if (!$validate->check($param)) {
-            return '50002';     //提示传参不符合格式要求
         }
 
         //插入一条数据
@@ -108,15 +45,6 @@ class System
         //验证登陆权限
         if ($this->loginType != 2) {
             return '30005';
-        }
-
-        //检验信息
-        $validate = Loader::validate('SystemInfo');
-        if (!$validate->check($param,$validate->getRule('modifyRule'))) {
-            return '50002';
-        }
-        if (count($param) < 2) {
-            return '50004';     //提示没有操作信息
         }
 
         //修改信息
@@ -144,10 +72,11 @@ class System
     }
 
     //获得微信必要信息
-    public function getSystemInfo($param)
+    public function getSystemInfo()
     {
         $SystemInfo = new SystemInfo();
         $ret = $SystemInfo->getLastInfo();
+
         if ($ret) {
             return $ret;
         }
@@ -184,12 +113,6 @@ class System
     //修改用户信息
     public function modifyUserInfo($param)
     {
-        //验证传入的参数
-        $validate = Loader::validate('Admin');
-        if (!$validate->check($param,$validate->getRule('modifyRule'))) {
-            return '50002';
-        }
-
         if ($this->loginType !=2 && $this->userId !== $param['userId']) {
             return '30005';     //提示权限不够
         }
@@ -254,13 +177,6 @@ class System
         if ($this->loginType != 2) {
             return '30005';
         }
-
-        //验证参数
-        $validate = Loader::validate('Common');
-        if (!$validate->check($param,$validate->getRule('pageRule'))) {
-            return '50002';
-        }
-
         //获得数据
         $Admin = new Admin();
         $info = $Admin->getPage($param);
@@ -288,13 +204,6 @@ class System
     //系统登录
     public function login($info)
     {
-        if (!$info->has('userId','post') || !$info->has('password','post')) {
-            return '50003';         //没有传人相关信息
-        }
-
-        if (empty($info->post('userId')) || empty($info->post('userId'))) {
-            return '50001';         //传参为空或传参不全
-        }
         //通过userId获得相应的信息
         $AdminObj = new Admin();
         $userInfo = $AdminObj->getSelf(['userId' => $info->post('userId')]);

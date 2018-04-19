@@ -19,6 +19,19 @@ class SystemInfo extends Validate
         'aesKey'        => 'length:43',
     ];
 
+    /**
+     * 检验修改系统参数信息
+     * @param array $param
+     * @return bool
+     */
+    public function checkModifySystemInfo(array $param):bool
+    {
+        if (!$this->verifyLen($param,1,6)) {
+            return false;
+        }
+        return $this->check($param,$this->modifyRule);
+    }
+
 
 
 }

@@ -82,6 +82,11 @@ class BaseAdmin
             return '30003';
         }
 
+        //判断ip地址
+        if (!isset($msg['ip']) || $msg['ip'] != $this->request->ip()) {
+            return '30009';         //提示不能跨域请求
+        }
+
         $info = Admin::getSelf(['userId' => $this->userId]);
         //验证userId是否是管理员
         if (empty($info)) {

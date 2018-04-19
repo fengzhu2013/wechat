@@ -5,6 +5,7 @@ use app\common\service\Status;
 use app\common\service\WriteLog;
 use app\system\logic\System;
 use EasyWeChat\Factory;
+use think\Loader;
 use think\Request;
 
 class Index
@@ -47,12 +48,19 @@ class Index
     //登陆
     public function login()
     {
+        //验证数据
+        $validate   = Loader::validate('Admin');
+        if (!$validate->checkLogin($this->request->post())) {
+            return json(Status::processValidateMsg($validate->getError()));
+        }
+        //逻辑处理
         $System = new System();
         $ret    = $System->login($this->request);
         //记录操作日志
         //获得操作者等信息
         $operatorInfo = $System->getInitInfo();
-        WriteLog::writeLog($ret,$operatorInfo,'admin','l',$this->request->post());
+        $msg = array_merge($this->request->post(),['ip' => $this->request->ip()]);
+        WriteLog::writeLog($ret,$operatorInfo,WriteLog::ADMIN,WriteLog::LOGIN,$msg);
 
         //加工返回信息
         $res = Status::processStatus($ret);

@@ -30,6 +30,7 @@ class Status
         '30006' => '已是管理员',
         '30007' => '不是管理员',
         '30008' => '账号状态不正常',
+        '30009' => '不能跨域请求',
 
         //应用级错误
         '40001' => '用户号格式错误',
@@ -121,6 +122,15 @@ class Status
         return ['status' => 0,'msg' => $msg];
     }
 
+    /**
+     * 加工验证错误信息
+     * @param $msg
+     * @return array
+     */
+    public static function processValidateMsg($msg)
+    {
+        return ['status' => 50002,'msg' => $msg];
+    }
 
     /**
      * 自定义强制输出json，并结束程序运行

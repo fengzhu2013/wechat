@@ -32,4 +32,19 @@ class SceneInfo extends Validate
         'startDate' => 'date',
         'endDate'   => 'date',
     ];
+
+    /**
+     * 检验修改渠道信息参数
+     * @param array $param
+     * @return bool
+     */
+    public function checkModifyScene(array $param):bool
+    {
+        if (!$this->verifyLen($param,-1,3)) {
+            return false;
+        }
+        return $this->check($param,$this->modifyRule);
+    }
+
+
 }

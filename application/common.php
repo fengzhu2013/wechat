@@ -23,11 +23,32 @@ function createSESSION_ID($userId,$password,$time)
     return md5($userId.$password.$time);
 }
 
+
+
+/**
+ * 获得文件后缀名
+ * @param $filename
+ * @return bool|string
+ */
 function getExtension($filename)
 {
     $index = strrpos($filename,'.');
     if ($index !== false) {
         return substr($filename,$index+1);
+    }
+    return false;
+}
+
+/**
+ * 活动文件名，及去除'.'和文件后缀名
+ * @param $filename
+ * @return bool|string
+ */
+function getName($filename)
+{
+    $index = strrpos($filename,'.');
+    if ($index !== false) {
+        return substr($filename,0,$index);
     }
     return false;
 }

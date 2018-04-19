@@ -2,23 +2,18 @@
 namespace app\scene\logic;
 
 use app\common\logic\ArrayTool;
+use app\common\logic\BaseLogic;
 use app\common\logic\File;
 use app\scene\model\SceneInfo;
 use app\wechat\service\QrCode;
 use function Couchbase\fastlzCompress;
 use think\Loader;
 
-class Scene
+class Scene extends BaseLogic
 {
     const QRCODE_PATH = ROOT_PATH.'public'.DS.'qrcode'.DS;
 
     const ZIP_PATH = ROOT_PATH.'public'.DS.'zip'.DS;
-
-    protected $timestamp;
-
-    protected $userId;
-
-    protected $objectId;
 
     protected $actionMsg;
 
@@ -27,11 +22,8 @@ class Scene
 
     public function __construct($loginLogInfo = [])
     {
-        $this->timestamp = time();
+        parent::__construct($loginLogInfo);
         $this->actionMsg = [];
-        if ($loginLogInfo) {
-            @$this->userId = $loginLogInfo['userId'];
-        }
     }
 
     //批量导入渠道信息
@@ -93,6 +85,7 @@ class Scene
         $keys = $SceneInfo->getKeys();
         //先换键
         foreach ($fileInfo as $key => $val) {
+            $val['createTime'] = $this->timestamp;
             $sceneInfo[$countInfo[$key]['sceneId']] = $val;
         }
         foreach ($sceneInfo as &$val) {
@@ -165,19 +158,6 @@ class Scene
     }
 
     /**
-     * 获得日志必要信息
-     * @return array
-     */
-    public function getInitInfo()
-    {
-        return [
-            'userId'        => $this->userId,
-            'objectId'      => $this->objectId,
-            'createTime'    => $this->timestamp,
-        ];
-    }
-
-    /**
      * 获得操作的记录信息
      * @return array
      */
@@ -240,11 +220,6 @@ class Scene
     //添加单个渠道信息
     public function addOneScene($param)
     {
-        $validate = Loader::validate('SceneInfo');
-        if (!$validate->check($param)) {
-            return '50002';
-        }
-
         $Scene = new \app\scene\model\Scene();
         //获得数据库中已有的待领取的二维码数量
         $waitCount = $Scene->getWaitCount();
@@ -275,7 +250,8 @@ class Scene
             return '20003';
         }
 
-        //换键
+        $param['createTime'] = $this->timestamp;
+        //换键['sceneId' => []]
         $info[$countInfo[0]['sceneId']] = $param;
 
         $SceneInfo = new SceneInfo();
@@ -293,27 +269,9 @@ class Scene
         return true;
     }
 
-    //初始化日志信息
-    private function initLog($info)
-    {
-        if (isset($info['userId'])) {
-            $this->userId = $info['userId'];
-        }
-        $this->objectId = $info['id'];
-    }
-
     //获得渠道列表
     public function getSceneList($param)
     {
-        if (count($param) > 2) {
-            return '50003';
-        }
-        //验证字段
-        //验证参数
-        $validate = Loader::validate('Common');
-        if (!$validate->check($param,$validate->getRule('pageRule'))) {
-            return '50002';
-        }
         //先获取二维码表的列表
         $Scene = new \app\scene\model\Scene();
         @$sceneArr = $Scene->getHadInfo($param['page'],$param['pageSize']);
@@ -359,12 +317,6 @@ class Scene
     //删除单个渠道，其实是修改状态
     public function deleteOneScene($param)
     {
-        //验证字段
-        $validate = Loader::validate('Scene');
-        if (!$validate->check($param,$validate->getRule('modifyRule'))) {
-            return '50002';
-        }
-
         //更具id获得信息
         $Scene = new \app\scene\model\Scene();
         $info = $Scene::get(['id' => $param['id']]);
@@ -387,9 +339,6 @@ class Scene
     //批量删除
     public function deleteScenes($param)
     {
-        if (empty($param) || !isset($param['ids'])) {
-            return '50001';
-        }
         if (strpos($param['ids'],',') !== false) {
             $params = explode(',',$param['ids']);
         } else {
@@ -431,14 +380,6 @@ class Scene
     //修改信息
     public function modifyScene($param)
     {
-        //验证信息
-        $validate = Loader::validate('SceneInfo');
-        if (!$validate->check($param,$validate->getRule('modifyRule'))) {
-            return '50002';
-        }
-        if (count($param) < 2) {
-            return '50005';     //没有更新的消息
-        }
         $Scene = new \app\scene\model\Scene();
         $info = $Scene::getSelf(['id' => $param['id']]);
         if (empty($info)) {
@@ -492,19 +433,26 @@ class Scene
     //批量打包下载渠道二维码
     public function downloadScenes($request)
     {
-
         $zip = new \ZipArchive();
         $zipName = time().'_downloadScene.zip';
         //新建压缩包
         if ($zip->open(self::ZIP_PATH.$zipName,\ZipArchive::CREATE) !== true) {
             return false;
         }
+        //获得所有正常二维码的场景号
+        $Scene = new \app\scene\model\Scene();
+        $sceneIds = $Scene->getAllByStatus(2);
+        if (!$sceneIds) {
+            return '50006';     //没有记录信息
+        }
+        $sceneIdArr = array_column($sceneIds,'sceneId');
         //把图片一张张压缩进去
         $handle = opendir(self::QRCODE_PATH);
         while (($filename = readdir($handle)) !== false) {
             if ($filename != '.' && $filename != '..') {
-                $ext = getExtension($filename);
-                if ($ext && ($ext == 'jpg' || $ext == 'jpeg')) {
+                $ext  = getExtension($filename);
+                $name = getName($filename);
+                if ($ext && ($ext == 'jpg' || $ext == 'jpeg') && in_array($name,$sceneIdArr)) {
                     $zip->addFile(self::QRCODE_PATH.$filename,$filename);
                 }
             }

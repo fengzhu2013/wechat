@@ -1,12 +1,13 @@
 <?php
 namespace app\admin\controller;
 
-use app\admin\logic\Scene;
-use app\admin\logic\System;
+use app\common\logic\Common;
 use app\common\logic\FormatString;
 use app\common\model\AdminLog;
 use app\common\service\Status;
 use app\common\service\WriteLog;
+use app\wechat\model\User;
+use app\wechat\model\OpenidList;
 use think\Controller;
 use think\Db;
 use think\Request;
@@ -61,7 +62,7 @@ class Admin
     {
         $this->request = Request::instance();
         $this->timestamp = time();
-        $this->checkLogin();
+        //$this->checkLogin();
     }
 
     /**
@@ -123,6 +124,24 @@ class Admin
         return true;
     }
 
+
+    public function testSub()
+    {
+        //生成内部唯一标识符
+        $userId = Common::createUserId();
+        $openid = 'ohnwgw1-6Sc_f5qH703eRBGsjnnU';
+
+        $User = new User();
+        /**存储两张表**/
+        //存user表
+        $info = ['userId' => $userId,'openid' => $openid,'status' => '1'];
+        var_dump($User->insertInfo($info));
+
+        //存user_list表
+        $OpenidList = new OpenidList();
+        $listInfo = ['openid' => $openid,'status' => '1','createTime' => $this->timestamp];
+        var_dump($OpenidList->insertInfo($listInfo));
+    }
 
 
 
@@ -254,108 +273,7 @@ class Admin
 
     }
 
-    //自定义关注时或默认回复
-    public function setSubAndDefInfo()
-    {
 
-    }
-
-    //获得关注时或默认回复信息
-    public function getSubAndDefInfo()
-    {
-
-    }
-
-    //修改关注时或默认回复信息
-    public function modifySubAndDefInfo()
-    {
-
-    }
-
-    //删除默认，关注或关键词回复信息
-    public function deleteReplyInfo()
-    {
-
-    }
-
-    //新增关键词回复信息
-    public function addKeywordsInfo()
-    {
-
-    }
-
-    //获得关键词回复信息
-    public function getKeywordsInfo()
-    {
-
-    }
-
-    //获得关键词列表
-    public function getKeywordsList()
-    {
-
-    }
-
-    //修改关键词信息
-    public function modifyKeywordsInfo()
-    {
-
-    }
-
-    //新增菜单
-    public function addMenu()
-    {
-
-    }
-
-    //获得菜单
-    public function getMenu()
-    {
-
-    }
-
-    //修改菜单
-    public function modifyMenu()
-    {
-
-    }
-
-    //删除菜单
-    public function deleteMenu()
-    {
-
-    }
-
-
-    //获得文章列表
-    public function getArticleList()
-    {
-
-    }
-
-    //获得一篇文章的详情
-    public function getArticle()
-    {
-
-    }
-
-    //修改一篇文章
-    public function modifyArticle()
-    {
-
-    }
-
-    //删除一片文章
-    public function deleteArticle()
-    {
-
-    }
-
-    //添加一篇文章
-    public function addArticle()
-    {
-
-    }
 
     //活动已有留言的文章列表
     public function getArticleHasCom()
@@ -420,18 +338,7 @@ class Admin
     }
 
 
-    //获得素材列表
-    public function  getMediaList()
-    {
 
-    }
-
-
-    //获得素材
-    public function getMedia()
-    {
-
-    }
 
 
 

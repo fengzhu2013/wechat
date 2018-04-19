@@ -26,11 +26,12 @@ class ArrayTool
         if (is_array($keys)) {
             foreach ($newArr as $key => $val) {
                 if (in_array($key,$keys)) {
-                    unset($val[$key]);
+                    unset($newArr[$key]);
                 }
             }
             return $newArr;
         }
+        exit;
         return $newArr;
     }
 
@@ -72,6 +73,44 @@ class ArrayTool
         }
         return true;
     }
+
+    /**
+     * 比较两个数组的key和value,若第一个数组的元素（包括key），和第二个都一样，返回true
+     * @param array $arr1
+     * @param array $arr2
+     * @return bool
+     */
+    public static function compareArr(array $arr1,array $arr2):bool
+    {
+        if (empty(array_diff_assoc($arr1,$arr2))) {
+            return true;
+        }  else {
+            return false;
+        }
+    }
+
+    /**
+     * 移除数组中重复的元素
+     * @param array $arr
+     * @return array
+     */
+    public static function arrayUnique(array $arr):array
+    {
+        if (count($arr) === count($arr,1)) {
+            return array_unique($arr);
+        } else {
+            //多维数组
+            foreach ($arr as $key => $val) {
+                $arr[$key] = json_encode($val);
+            }
+            $newArr = array_unique($arr);
+            foreach ($newArr as $key => $val) {
+                $newArr[$key] = json_decode($val,true);
+            }
+            return $newArr;
+        }
+    }
+
 
 
 }

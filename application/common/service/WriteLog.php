@@ -10,6 +10,45 @@ use app\common\model\AdminLog;
  */
 class WriteLog
 {
+    const ADD           = 'a';
+    const UPDATE        = 'u';
+
+    const OUTPUT        = 'o';
+    const INPUT         = 'i';
+
+    const DELETE        = 'd';
+    const MORE_DELETE   = 'm_d';
+
+    const MORE_ADD      = 'm_a';
+    const LOGIN         = 'l';
+
+    const REMOVE        = 'r';              //指注销登录
+
+    const ADMIN         = 'admin';
+    const ARTICLE       = 'article';
+
+    const AUTO_REPLY    = 'auto_reply';
+    const COMMENT       = 'comment';
+
+    const MENU          = 'menu';
+    const SCENE         = 'scene';
+
+    const SCENE_LOG     = 'scene_log';
+    const SCENE_INFO    = 'scene_info';
+
+    const SYSTEM_INFO   = 'system_info';
+    const TOKEN         = 'token';
+
+    const USER          = 'user';
+    const USER_INFO     = 'user_info';
+
+    const USER_LOG      = 'user_log';
+    const USER_ACTION   = 'user_action';
+
+
+
+
+
     private static $logInfo;
 
 
