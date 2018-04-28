@@ -2,6 +2,7 @@
 namespace app\wechat\logic;
 
 use app\common\logic\Common;
+use app\common\service\WriteOpenidList;
 use app\wechat\model\User;
 use app\wechat\model\OpenidList;
 
@@ -58,9 +59,8 @@ class Subscribe
             $User->insertInfo($info);
 
             //存user_list表
-            $OpenidList = new OpenidList();
-            $listInfo = ['openid' => $openid,'status' => '1','createTime' => $this->timestamp];
-            $OpenidList->insertInfo($listInfo);
+            $listInfo   = ['openid' => $openid,'status' => WriteOpenidList::UNTREATED,'createTime' => $this->timestamp];
+            WriteOpenidList::writeLog($listInfo);
         } else {
             //记录日志信息
             $this->userId = $info['userId'];

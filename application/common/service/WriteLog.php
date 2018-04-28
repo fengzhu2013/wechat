@@ -45,6 +45,8 @@ class WriteLog
     const USER_LOG      = 'user_log';
     const USER_ACTION   = 'user_action';
 
+    const MASS_LOG      = 'mass_log';
+
 
 
 
@@ -97,5 +99,21 @@ class WriteLog
         //写日志
         $AdminLog->saveSelf();
     }
+
+    //群发错误日志
+    public static function writeMassErrLog($info,$action)
+    {
+        $operatorInfo = ['objectId' => null,'createTime' => time()];
+        self::writeLog(false,$operatorInfo,self::MASS_LOG,$action,$info);
+    }
+
+    //评论错误日志
+    public static function writeCommentLog($info,$action,$operatorInfo = [])
+    {
+        $operatorInfo = ['objectId' => null,'createTime' => time()];
+        self::writeLog(false,$operatorInfo,self::COMMENT,$action,$info);
+    }
+
+
 
 }

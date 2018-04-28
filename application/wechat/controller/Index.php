@@ -42,7 +42,7 @@ class Index
                 'file' => __DIR__ . '/wechat.log',
             ],
         ];
-        $systemInfo = $this->initSystem();
+        $systemInfo = $this->getSystem();
         if (!empty($systemInfo)) {
             $config['app_id'] = $systemInfo['appid'];
             $config['secret'] = $systemInfo['appsecret'];
@@ -295,12 +295,11 @@ class Index
     /**
      * 初始化配置信息
      */
-    private function initSystem()
+    public function getSystem()
     {
         //获得数据库的信息
-        $SystemInfo = new SystemInfo();
-        $info       = $SystemInfo->getInfoDesc();
-        return $info;
+        $SystemInfo         = new SystemInfo();
+        return $SystemInfo->getInfoDesc();
     }
 
 

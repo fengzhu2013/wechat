@@ -274,20 +274,6 @@ class Admin
     }
 
 
-
-    //活动已有留言的文章列表
-    public function getArticleHasCom()
-    {
-
-    }
-
-    //根据文章获得留言
-    public function getComByArticle()
-    {
-
-    }
-
-
     //根据关注时间获得用户列表
     public function getUserListBySubTime()
     {

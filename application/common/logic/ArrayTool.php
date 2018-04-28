@@ -31,8 +31,6 @@ class ArrayTool
             }
             return $newArr;
         }
-        exit;
-        return $newArr;
     }
 
 
@@ -109,6 +107,57 @@ class ArrayTool
             }
             return $newArr;
         }
+    }
+
+    /**
+     * 为needle数组补充数据
+     * @param array $needle
+     * @param array $formatKey
+     * @param string $replace
+     * @return array
+     */
+    public static function formatArray(array $needle,array $formatKey,$replace = ''): array
+    {
+        foreach ($formatKey as $val) {
+            if (!isset($needle[$val])) {
+                $needle[$val] = $replace;
+            }
+        }
+        return $needle;
+    }
+
+    /**
+     * 给多维数组，按照子数组的某个元素排序
+     * @param array $arr
+     * @param string $key
+     * @param string $callback
+     * @return array
+     */
+    public static function sortArray(array $arr,string $key,string $callback = ''): array
+    {
+        $newArr = [];
+        $count  = count($arr);
+        $mCount = count($arr,1);
+        if ($count == $mCount) {
+            return [];
+        }
+        for($i=0;$i<$count-1;$i++) {
+            for ($j=0;$j<$count-$i-1;$j++) {
+                if ($callback) {
+                    $left  = call_user_func($callback,$arr[$j][$key]);
+                    $right = call_user_func($callback,$arr[$j+1][$key]);
+                } else {
+                    $left = $arr[$j][$key];
+                    $right = $arr[$j+1][$key];
+                }
+                if ($right < $left) {
+                    $newArr = $arr[$j];
+                    $arr[$j] = $arr[$j+1];
+                    $arr[$j+1] = $newArr;
+                }
+            }
+        }
+        return $arr;
     }
 
 

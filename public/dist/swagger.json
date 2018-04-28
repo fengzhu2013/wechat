@@ -410,6 +410,289 @@
                 }
             }
         },
+        "/comment/admin/getArticleList": {
+            "post": {
+                "tags": [
+                    "Comment"
+                ],
+                "summary": "\u83b7\u5f97\u5df2\u6709\u7684\u6587\u7ae0\u5217\u8868",
+                "description": "\u83b7\u5f97\u5df2\u6709\u7684\u6587\u7ae0\u5217\u8868",
+                "operationId": "getArticleList",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "name": "SESSION_ID",
+                        "in": "formData",
+                        "description": "SESSION_ID",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "formData",
+                        "description": "\u5f53\u524d\u9875",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "formData",
+                        "description": "\u9875\u5bb9\u91cf",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/comment/admin/getComByArticle": {
+            "post": {
+                "tags": [
+                    "Comment"
+                ],
+                "summary": "\u6839\u636e\u6587\u7ae0\u83b7\u5f97\u7559\u8a00",
+                "description": "\u6839\u636e\u6587\u7ae0\u83b7\u5f97\u7559\u8a00",
+                "operationId": "getComByArticle",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "name": "SESSION_ID",
+                        "in": "formData",
+                        "description": "SESSION_ID",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "msgid",
+                        "in": "formData",
+                        "description": "msgid",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "page",
+                        "in": "formData",
+                        "description": "\u5f53\u524d\u9875",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "formData",
+                        "description": "\u9875\u5bb9\u91cf",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/comment/index/getMassLog": {
+            "post": {
+                "tags": [
+                    "Comment"
+                ],
+                "summary": "\u83b7\u5f97\u7fa4\u53d1\u65e5\u4fe1\u606f",
+                "description": "\u83b7\u5f97\u7fa4\u53d1\u65e5\u4fe1\u606f\uff0c\u83b7\u5f97\u7fa4\u53d1\u65e5\u7684\u7fa4\u53d1\u6587\u7ae0id\u53catitle",
+                "operationId": "getMassLog",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "name": "startDate",
+                        "in": "formData",
+                        "description": "\u5f00\u59cb\u65e5\u671f",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "endDate",
+                        "in": "formData",
+                        "description": "\u7ed3\u675f\u65e5\u671f",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/comment/index/getComment": {
+            "post": {
+                "tags": [
+                    "Comment"
+                ],
+                "summary": "\u83b7\u5f97\u7559\u8a00",
+                "description": "\u83b7\u5f97\u7559\u8a00",
+                "operationId": "getComment",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "multipart/form-data"
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/content/action/getBaseCode": {
+            "post": {
+                "tags": [
+                    "Content"
+                ],
+                "summary": "\u83b7\u5f97openid\u7684url",
+                "description": "\u83b7\u5f97openid\u7684url\uff0c\u7528\u6765\u8df3\u8f6c\uff0c\u53ea\u80fd\u5728\u5fae\u4fe1\u4e2d\u6253\u5f00",
+                "operationId": "getBaseCode",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "multipart/form-data"
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/content/action/writeView": {
+            "post": {
+                "tags": [
+                    "Content"
+                ],
+                "summary": "\u8bb0\u5f55\u6d4f\u89c8\u65e5\u5fd7",
+                "description": "\u8bb0\u5f55\u6d4f\u89c8\u65e5\u5fd7",
+                "operationId": "writeView",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "name": "articleId",
+                        "in": "formData",
+                        "description": "\u6587\u7ae0id",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "openid",
+                        "in": "formData",
+                        "description": "\u5fae\u4fe1openid",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/content/action/writeShare": {
+            "post": {
+                "tags": [
+                    "Content"
+                ],
+                "summary": "\u8bb0\u5f55\u5206\u4eab\u65e5\u5fd7",
+                "description": "\u8bb0\u5f55\u5206\u4eab\u65e5\u5fd7",
+                "operationId": "writeShare",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "name": "articleId",
+                        "in": "formData",
+                        "description": "\u6587\u7ae0id",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "openid",
+                        "in": "formData",
+                        "description": "\u5fae\u4fe1openid",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "type",
+                        "in": "formData",
+                        "description": "\u5206\u4eab\u7c7b\u578b",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "parentNo",
+                        "in": "formData",
+                        "description": "\u7236\u5206\u4eab\u7f16\u53f7",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/content/action/getParenNo": {
+            "post": {
+                "tags": [
+                    "Content"
+                ],
+                "summary": "\u83b7\u5f97\u672c\u6b21\u5206\u4eab\u7f16\u53f7",
+                "description": "\u83b7\u5f97\u672c\u6b21\u5206\u4eab\u7f16\u53f7\uff0c\u9488\u5bf9\u7b2c\u4e00\u6b21\u5206\u4eab\uff0c\u628a\u5206\u4eab\u7f16\u53f7\u62fc\u63a5\u5230\u5206\u4eab\u8fde\u63a5\u4e0a\uff0c\u82e5\u4e0d\u662f\u7b2c\u4e00\u6b21\u5206\u4eab\uff0c\u76f4\u63a5\u5230\u8fde\u63a5\u4e0a\u53d6\u503c\u5373\u53ef\uff08\u8fd9\u4e5f\u662f\u533a\u5206\u662f\u4e0d\u662f\u7b2c\u4e00\u6b21\u5206\u4eab\uff09\uff0c\u4e0d\u7528\u518d\u8c03\u6b64\u63a5\u53e3\u3002",
+                "operationId": "getParenNo",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "multipart/form-data"
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                }
+            }
+        },
         "/content/admin/getArticleList": {
             "post": {
                 "tags": [

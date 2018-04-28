@@ -2,6 +2,7 @@
 namespace app\god\controller;
 
 use app\common\logic\Common;
+use app\common\logic\StringTool;
 use app\common\service\Status;
 use app\common\service\WriteLog;
 use app\scene\logic\Scene;
@@ -132,14 +133,45 @@ class Index
      */
     public function responseSubscribe()
     {
-        $Index = new \app\wechat\controller\Index();
+        /*$Index = new \app\wechat\controller\Index();
 
         $ResponseMsg = new ResponseMsg();
         //$ret   = \app\wechat\logic\Common::getUserIdByOpenId('ohnwgw1-6Sc_f5qH703eRBGsjnnU');
         $ret = $ResponseMsg->responseMenuKey('tf202');
-        var_dump($ret);
-
+        var_dump($ret);*/
+        $foo = '0123456789a123456789b123456789c';
+        var_dump(strpos($foo,'c',31)).'<br />';
+        //var_dump( StringTool::stringPosition($foo,'c',1)).'<br />';
+        //var_dump(StringTool::stringPosition($foo,'c',3)).'<br />';
+//        echo StringTool::stringPosition($foo,'1',3).'<br />';
+//        var_dump(StringTool::stringPosition($foo,'1',4)).'<br />';
+//        echo StringTool::stringPosition($foo,'1',-1).'<br />';
+//        echo StringTool::stringPosition($foo,'1',-2).'<br />';
+//        echo StringTool::stringPosition($foo,'1',-3).'<br />';
+        var_dump(StringTool::stringPosition($foo,'0',-4)).'<br />';
     }
+
+
+    public function testInsertAllSelf()
+    {
+        $arr = [
+            0   => ['content' => 'content1---2','summary' => 'summary1----1','title' => 'test','articleTime' => time()],
+            1   => ['content' => 'content1---1','summary' => 'summary1----1','title' => 'testddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd','articleTime' => time()],
+            2   => ['content' => 'content1---3','summary' => 'summary1----1','title' => 'test','articleTime' => time()],
+        ];
+
+        $Article = new \app\god\model\Article();
+        $ret     = $Article->insertAll($arr,'article_id');
+        var_dump($ret);
+        exit;
+    }
+
+
+    public function getWechatUserInfo()
+    {
+        //逻辑处理
+    }
+
 
 
 

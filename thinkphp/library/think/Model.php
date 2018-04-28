@@ -12,6 +12,7 @@
 namespace think;
 
 use app\common\logic\FormatString;
+use app\common\logic\StringTool;
 use InvalidArgumentException;
 use think\Cache;
 use think\Config;
@@ -152,6 +153,12 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
         $this->initialize();
 
         self::$formatObj = new FormatString();
+
+        Log::init([
+            'type'          => 'File',
+            'path'          => SQL_ERROR,
+            'apart_level'   =>  ['sqlError'],
+        ]);
     }
 
     /**
@@ -1031,7 +1038,7 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
      * @param array $where
      * @return array
      */
-    public static function getSelf(array $where)
+    public static function getSelf(array $where):array
     {
         $userInfo = self::get(self::$formatObj->formatArrKey($where,'i'));
         if ($userInfo) {
@@ -1579,7 +1586,129 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
      */
     public function getCount($where = [])
     {
+        if ($where) {
+            $where = self::$formatObj->formatArrKey($where,'i');
+        }
         return self::where($where)->count();
     }
+
+
+    /**
+     * 插入数据,尽量用于插入多条,0表示失败，其他数字表示影响的条数
+     * @param array $info
+     * @param string $pk
+     * @return int
+     */
+    public function insertAllSelf(array $info,string $pk = 'id'):int
+    {
+        $moreCount  = count($info,1);
+        $count      = count($info);
+        if ($moreCount === $count) {
+            //单条记录
+            $data = self::$formatObj->formatArrKey($info,'i');
+            $this->data($data)->isUpdate(false)->save();
+            $ret  = $this->getAttr($pk);
+            if (!$ret) {
+                return 0;
+            }
+            return $ret;
+        }
+
+        $sqlString = [];
+        //确定第一个key
+        if (isset($info[0]) && !empty($info[0])) {
+            $index = 0;
+        } else {
+            $index = array_keys($info)[0];
+        }
+        $table = lcfirst($this->name);
+        //多条记录
+        foreach ($info as $key => $val) {
+            $data = self::$formatObj->formatArrKey($val,'i');
+
+            //活动sql语句
+            if ($index === $key) {
+                $sqlString[$key] = Db::name($table)->fetchSql(true)->insert($data);
+            } else {
+               $string = Db::name($table)->fetchSql(true)->insert($data);
+               $right  = StringTool::stringPosition($string,')',-1);
+               $left   = StringTool::stringPosition($string,'(',-1);
+               $length = $right - $left + 1;
+               $sqlString[$key] = substr($string,$left,$length);
+            }
+        }
+        //合并成一个sql语句
+        $sql = implode(',',$sqlString);
+        try {
+            $ret = Db::execute($sql);
+        } catch (\Exception $e) {
+            $ret = 0;
+        }
+        return $ret;
+    }
+
+    /**
+     * 插入多条信息，如果返回是int，那么表示影响了多少条数据，
+     * 如果返回数组，数组元素的个数表示成功的个数
+     * @param array $info
+     * @param string $pk
+     * @return array|int|mixed
+     */
+    public function insertAllInfoSelf(array $info,string $pk = 'id')
+    {
+        //先一次性插入
+        $ret = $this->insertAllSelf($info,$pk);
+        if (!$ret) {
+            //如果插入失败，开始循环插入
+            return $this->insertAllSelfOne($info,$pk);
+        }
+        return $ret;
+    }
+
+    /**
+     * 循环插入多条数据，插入失败记录日志
+     * @param array $info
+     * @param string $pk
+     * @return array|int|mixed
+     */
+    public function insertAllSelfOne(array $info,$pk = 'id')
+    {
+        $moreCount  = count($info,1);
+        $oneCount   = count($info);
+        if ($moreCount === $oneCount) {
+            //单条记录
+            $data = self::$formatObj->formatArrKey($info,'i');
+            $this->data($data)->isUpdate(false)->save();
+            $ret  = $this->getAttr($pk);
+            if (!$ret) {
+                return 0;
+            }
+            return $ret;
+        }
+        $ret = [];
+        $table = lcfirst($this->name);
+        foreach ($info as $key => $val) {
+            $data = self::$formatObj->formatArrKey($val,'i');
+            try {
+                $this->data($data)->isUpdate(false)->save();
+                $ret[$key] = $this->getAttr($pk);
+            } catch (\Exception $e) {
+                $string = Db::name($table)->fetchSql(true)->insert($data);
+                $msg = $string.PHP_EOL.var_export($val,true);
+                //记sql日志
+                Log::write($msg,'sqlError');
+            }
+        }
+        return $ret;
+    }
+
+
+
+
+
+
+
+
+
 
 }

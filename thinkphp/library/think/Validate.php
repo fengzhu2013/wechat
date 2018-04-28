@@ -41,6 +41,7 @@ class Validate
     protected static $typeMsg = [
         'require'     => ':attribute不能为空',
         'number'      => ':attribute必须是数字',
+        'integer'      => ':attribute必须是整形',
         'float'       => ':attribute必须是浮点数',
         'boolean'     => ':attribute必须是布尔值',
         'email'       => ':attribute格式不符',
@@ -1250,4 +1251,41 @@ class Validate
             throw new \BadMethodCallException('method not exists:' . __CLASS__ . '->' . $method);
         }
     }
+
+    /**
+     * 验证数组的元素个数
+     * @param array $param
+     * @param int $len  若不存在max，表示元素固定的个数；若存在max，表示元素个数最小不能小于或等于该数目
+     * @param int $max 若存在，表示验证区间，且表示最大不超过的元素个数，也不能等于
+     * @return bool
+     */
+    protected function verifyLen(array $param,int $len,int $max = 0):bool
+    {
+        $count      = count($param);
+        /*$moreCount  = count($param,1);
+        if ($count !== $moreCount) {
+            $this->error = '不是一维数组';
+            return false;
+        }*/
+
+        //判断长度是否在某个区间
+        if ($max && !($count < $max && $count > $len)) {
+            $min = $len + 1;
+            $max = $max - 1;
+            $this->error = "参数的元素个数应该在[{$min},{$max}]之间";
+            return false;
+        } elseif (!$max) {
+            //仅是验证长度
+            if ($count !== $len) {
+                $this->error = "元素的个数应该是{$len},请核对";
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+
+
+
 }
