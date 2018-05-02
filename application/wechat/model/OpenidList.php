@@ -25,4 +25,22 @@ class OpenidList extends Model
         return $this->getAttr('id');
     }
 
+    /**
+     * @param string $status
+     * @param array $where
+     * @return int
+     */
+    public function updateStatus(string $status,array $where): int
+    {
+        $where = self::$formatObj->formatArrKey($where,'i');
+        $info  = ['status' => $status];
+        $ret   = $this->isUpdate(true)->save($info,$where);
+        if (!$ret) {
+            return 0;
+        }
+        return $ret;
+    }
+
+
+
 }

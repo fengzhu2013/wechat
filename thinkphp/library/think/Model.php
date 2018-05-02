@@ -1633,6 +1633,10 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
                $string = Db::name($table)->fetchSql(true)->insert($data);
                $right  = StringTool::stringPosition($string,')',-1);
                $left   = StringTool::stringPosition($string,'(',-1);
+               $left2  = StringTool::stringPosition($string,'(',2);
+               if ($left2) {
+                   $left = $left2;
+               }
                $length = $right - $left + 1;
                $sqlString[$key] = substr($string,$left,$length);
             }
@@ -1652,15 +1656,20 @@ abstract class Model implements \JsonSerializable, \ArrayAccess
      * 如果返回数组，数组元素的个数表示成功的个数
      * @param array $info
      * @param string $pk
+     * @param bool $log
      * @return array|int|mixed
      */
-    public function insertAllInfoSelf(array $info,string $pk = 'id')
+    public function insertAllInfoSelf(array $info,string $pk = 'id',$log = false)
     {
         //先一次性插入
         $ret = $this->insertAllSelf($info,$pk);
-        if (!$ret) {
+        if (!$ret && !$log) {
             //如果插入失败，开始循环插入
             return $this->insertAllSelfOne($info,$pk);
+        }
+        if (!$ret && $log) {
+            //记录日志
+            Log::write(var_export($info),'sqlError');
         }
         return $ret;
     }

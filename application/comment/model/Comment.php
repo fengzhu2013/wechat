@@ -55,6 +55,23 @@ class Comment extends Model
         return self::$formatObj->formatArrKey($info->toArray());
     }
 
+    /**
+     * 获得评论的评论数
+     * @param string $userId
+     * @return int
+     */
+    public function getComNum(string $userId)
+    {
+        $ret = 0;
+        $where  = ['user_id' => $userId];
+        $info   = self::where($where)->order('id','desc')->find();
+        if (empty($info) || !isset($info['com_num'])) {
+            return $ret;
+        }
+        $ret = intval($info['com_num']);
+        return $ret;
+    }
+
 
 
 }

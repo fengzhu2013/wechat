@@ -5,6 +5,7 @@ use app\common\logic\Common;
 use app\common\logic\StringTool;
 use app\common\service\Status;
 use app\common\service\WriteLog;
+use app\god\logic\God;
 use app\scene\logic\Scene;
 use app\wechat\logic\ResponseMsg;
 use EasyWeChat\Kernel\Messages\Article;
@@ -169,7 +170,12 @@ class Index
 
     public function getWechatUserInfo()
     {
+        ignore_user_abort(true);
+        set_time_limit(0);
         //逻辑处理
+        $God    = new God();
+        $ret    = $God->getWechatUserInfo();
+        return json(Status::processStatus($ret));
     }
 
 

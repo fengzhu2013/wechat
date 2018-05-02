@@ -6,15 +6,22 @@ use app\comment\model\User;
 use app\common\logic\BaseLogic;
 use app\common\logic\Common;
 use app\common\logic\Date;
+use app\common\service\FileLog;
 use app\common\service\WriteLog;
 use app\common\service\WriteOpenidList;
 use app\wechat\service\DataCube;
 
 class Comment extends BaseLogic
 {
+    const FILE_LOG_PATH     = RUNTIME_PATH.'comment'.DS;
     public function __construct(array $loginLogInfo = [], $isVerifyType = false)
     {
         parent::__construct($loginLogInfo, $isVerifyType);
+        FileLog::init([
+            'type'          => 'File',
+            'path'          => self::FILE_LOG_PATH,
+            'apart_level'   => ['modifyStatus','getWechatComment'],
+        ]);
     }
 
     //获取群发日志
@@ -124,6 +131,8 @@ class Comment extends BaseLogic
             }
             $ret               = $MassLog->updateMoreInfo($info);
             if (!$ret) {
+                //@$msg = '修改状态失败,id是'.$info['id'];
+                //FileLog::write($msg,'modifyStatus');
                 WriteLog::writeMassErrLog($info,WriteLog::UPDATE);
                 break;
             }
@@ -147,6 +156,8 @@ class Comment extends BaseLogic
                 if (is_array($ret)) {
                     //错误信息
                     WriteLog::writeCommentLog($ret,WriteLog::MORE_ADD);
+                    //$msg = '获取评论失败'.var_export($ret,true);
+                    //FileLog::write($msg,'getWechatComment');
                 }
             }
 
@@ -223,7 +234,7 @@ class Comment extends BaseLogic
         }
         //开始循环
         $begin += $count;
-        $this->firstGetComment($msg_data_id,$index,$begin,$count,$type);
+        $this->firstGetComment($msg_data_id,$index,$begin,$count,$type,$lastId);
     }
 
     protected function secondGetComment($msg_data_id,$index,$begin = 0,$count = 49,$type = 0,$lastId)
@@ -302,6 +313,11 @@ class Comment extends BaseLogic
                 WriteOpenidList::writeLog($list);
             }
             $ret[$key]['userId'] = $userId;
+
+            //确认评论数
+            $Comment = new \app\comment\model\Comment();
+            $num     = $Comment->getComNum($userId);
+            $ret[$key]['comNum'] = empty($num)?1:$num + 1;
         }
         return $ret;
     }

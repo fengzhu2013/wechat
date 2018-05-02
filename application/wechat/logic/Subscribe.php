@@ -68,6 +68,19 @@ class Subscribe
             $where = ['id' => $info['id']];
             $info  = ['status' => '1'];
             $User->updateStatus($info,$where);
+
+            //更改openid_list表中为5，表示需要更新信息
+            $status = 5;
+            $where  = ['openid' => $openid];
+            $OpenidList = new OpenidList();
+            $ret    = $OpenidList->updateStatus($status,$where);
+            if (empty($ret)) {
+                //删除数据
+                $OpenidList::destroy($where);
+                //插入数据
+                $listInfo   = ['userId' => $this->userId,'openid' => $openid,'status' => '5'];
+                $OpenidList->insertInfo($listInfo);
+            }
         }
     }
 
